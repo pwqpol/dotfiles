@@ -1,0 +1,156 @@
+<div
+  class="js-user-list-menu-content-root js-social-updatable text-left"
+  data-url="/pwqpol/yagit/lists"
+  data-batch-update-url="/stars/pwqpol/list-menu-batch"
+  data-update-after-submit
+>
+  <input type="hidden" value="_BSf-F2f50WDVROSAztlqMT4sKA4zICI6EtoEVhUjkibEMFYywgc012bPMjYp41rhP84WwUVNbi4V5VlTHQ1ww" data-csrf="true" class="js-user-list-batch-update-csrf" />
+  <div class="d-flex flex-column" style="max-height: 360px">
+
+      <div class="SelectMenu-list flex-1 overflow-y-auto px-3 pb-2 mb-0">
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-user-list-menu-form" data-turbo="false" action="/pwqpol/yagit/lists" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" autocomplete="off" /><input type="hidden" name="authenticity_token" value="pAIO0iMm7LH2g-FqZnnE5O9RTR3eNYdJvjUPip92olnPCBFwXqmHrFwYoygbO7JG-d7VCkkUanAcUs4EVR0WMA" autocomplete="off" />
+          <input type="hidden" name="repository_id" value="715538320">
+          <input type="hidden" name="context" value="user_list_menu">
+          <input type="hidden" name="list_ids[]" value="">
+
+          <div id="filter-menu-user-list-715538320" role="list" data-filter-list aria-labelledby="user-lists-menu">
+              <div class="form-checkbox mt-1 mb-0 p-1" role="listitem">
+                <label class="d-flex">
+                  <input
+                    type="checkbox"
+                    class="mx-0 js-user-list-menu-item"
+                    name="list_names[]"
+                    value="🔮 Future ideas"
+                    
+                  >
+                  <span data-view-component="true" class="Truncate ml-2 text-normal f5">
+    <span data-view-component="true" class="Truncate-text">🔮 Future ideas</span>
+</span>
+                </label>
+              </div>
+              <div class="form-checkbox mt-1 mb-0 p-1" role="listitem">
+                <label class="d-flex">
+                  <input
+                    type="checkbox"
+                    class="mx-0 js-user-list-menu-item"
+                    name="list_names[]"
+                    value="🚀 My stack"
+                    
+                  >
+                  <span data-view-component="true" class="Truncate ml-2 text-normal f5">
+    <span data-view-component="true" class="Truncate-text">🚀 My stack</span>
+</span>
+                </label>
+              </div>
+              <div class="form-checkbox mt-1 mb-0 p-1" role="listitem">
+                <label class="d-flex">
+                  <input
+                    type="checkbox"
+                    class="mx-0 js-user-list-menu-item"
+                    name="list_names[]"
+                    value="✨ Inspiration"
+                    
+                  >
+                  <span data-view-component="true" class="Truncate ml-2 text-normal f5">
+    <span data-view-component="true" class="Truncate-text">✨ Inspiration</span>
+</span>
+                </label>
+              </div>
+
+            <div class="SelectMenu-blankslate" data-filter-empty-state hidden>
+              No results found.
+            </div>
+          </div>
+</form>      </div>
+  </div>
+
+  <footer class="SelectMenu-footer px-2">
+      <button data-repository-id="715538320" type="button" data-view-component="true" class="user-lists-menu-action js-user-lists-create-trigger btn-invisible btn btn-block text-left text-normal rounded-1 px-2">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-plus mr-1">
+    <path d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 0 1 0 1.5H8.5v4.25a.75.75 0 0 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2Z"></path>
+</svg>
+      Create list
+      <span class="js-user-list-create-trigger-text">
+      </span>
+</button>  </footer>
+  <template class="js-user-list-create-dialog-template" data-label="Create list">
+  <div class="Box-header">
+    <h2 class="Box-title">Create list</h2>
+  </div>
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="Box-body d-flex flex-column p-3 js-user-list-form" data-turbo="false" action="/stars/pwqpol/lists" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="xDJr3hnl8e8NZqV65bT8YGx2qKfapLepinBAmYKWAfTJAq-zHYCbgr9COszxu0vh6X6Gu-qYwNmt_rTM9THREw" autocomplete="off" />
+        <p class="color-fg-subtle mb-3">Create a list to organize your starred repositories.</p>
+      <input type="hidden" name="repository_id" value="{{ repositoryId }}">
+
+  <div class="form-group mx-0 mt-0 mb-2 js-user-list-input-container js-characters-remaining-container position-relative">
+    <auto-check src="/stars/pwqpol/list-check?attr=name" required>
+      <text-expander keys=":" data-emoji-url="/autocomplete/emoji">
+        <input
+          type="text"
+          name="user_list[name]"
+          class="form-control js-user-list-input js-characters-remaining-field"
+          placeholder="⭐️ Name this list"
+          value="{{ placeholderName }}"
+          aria-label="List name"
+          maxlength="32"
+          data-maxlength="32"
+          autofocus
+          required
+        >
+      </text-expander>
+      <input type="hidden" value="KVO0C1bf71KAyPWkFt7c2bJtxALxugueeTk9LhYBipe2OAlpF7OWohaStGDjgdHE5MBiiCeXlAdzB-i6pcakxQ" data-csrf="true" />
+    </auto-check>
+    <p
+      class="note error position-relative js-user-list-error"
+       hidden
+    >
+      Name .
+    </p>
+    <p class="mt-1 text-small float-right js-characters-remaining" data-suffix="remaining" hidden>
+      32 remaining
+    </p>
+  </div>
+  <div class="form-group mx-0 mt-0 mb-2 js-user-list-input-container js-characters-remaining-container position-relative">
+    <text-expander keys=":" data-emoji-url="/autocomplete/emoji">
+      <textarea
+        name="user_list[description]"
+        class="form-control js-user-list-input js-characters-remaining-field"
+        placeholder="Write a description"
+        aria-label="List description"
+        maxlength="160"
+        data-maxlength="160"
+        style="height: 74px; min-height: 74px"
+      ></textarea>
+    </text-expander>
+    <p
+      class="note error position-relative js-user-list-error"
+       hidden
+    >
+      Description .
+    </p>
+    <p class="mt-1 text-small float-right js-characters-remaining" data-suffix="remaining" hidden>
+      160 remaining
+    </p>
+  </div>
+  <div hidden="hidden" data-generic-message="Unable to save your list at this time." data-view-component="true" class="js-user-list-base flash flash-error mx-0 mt-0 mb-2">
+  
+    .
+
+
+  
+</div>      <button data-disable-invalid="true" data-submitting-message="Creating..." type="submit" disabled="disabled" data-view-component="true" class="Button--primary Button--medium Button Button--fullWidth mt-2">  <span class="Button-content">
+    <span class="Button-label">Create</span>
+  </span>
+</button>
+
+
+  <p class="note mt-2 mb-0">
+    <strong>Tip:</strong> type <code>:</code> to add emoji to the name or description.
+  </p>
+</form>
+  <div data-view-component="true" class="Box-footer Box-row--gray text-small color-fg-muted d-flex flex-items-baseline py-2">
+  <span title="Feature Release Label: Beta" aria-label="Feature Release Label: Beta" data-view-component="true" class="Label Label--success Label--inline px-2 mr-2">Beta</span>
+  <span class="mr-1">Lists are currently in beta.</span>
+  <a href="https://github.com//github/feedback/discussions/categories/lists">Share feedback and report bugs.</a>
+</div>
+</template>
+
+</div>

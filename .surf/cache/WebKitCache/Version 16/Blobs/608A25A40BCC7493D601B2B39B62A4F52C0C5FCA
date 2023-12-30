@@ -1,0 +1,2622 @@
+    <details
+  class="details-reset details-overlay details-overlay-dark js-command-palette-dialog"
+  id="command-palette-pjax-container"
+  data-turbo-replace
+>
+  <summary aria-label="Command palette trigger" tabindex="-1"></summary>
+  <details-dialog class="command-palette-details-dialog d-flex flex-column flex-justify-center height-fit" aria-label="Command palette">
+    <command-palette
+      class="command-palette color-bg-default rounded-3 border color-shadow-small"
+      return-to=/pwqpol/dotfiles/settings
+      user-id="147377992"
+      activation-hotkey="Mod+k,Mod+Alt+k"
+      command-mode-hotkey="Mod+Shift+K"
+      data-action="
+        command-palette-input-ready:command-palette#inputReady
+        command-palette-page-stack-updated:command-palette#updateInputScope
+        itemsUpdated:command-palette#itemsUpdated
+        keydown:command-palette#onKeydown
+        loadingStateChanged:command-palette#loadingStateChanged
+        selectedItemChanged:command-palette#selectedItemChanged
+        pageFetchError:command-palette#pageFetchError
+      ">
+
+        <command-palette-mode
+          data-char="#"
+            data-scope-types="[&quot;&quot;]"
+            data-placeholder="Search issues and pull requests"
+        ></command-palette-mode>
+        <command-palette-mode
+          data-char="#"
+            data-scope-types="[&quot;owner&quot;,&quot;repository&quot;]"
+            data-placeholder="Search issues, pull requests, discussions, and projects"
+        ></command-palette-mode>
+        <command-palette-mode
+          data-char="!"
+            data-scope-types="[&quot;owner&quot;,&quot;repository&quot;]"
+            data-placeholder="Search projects"
+        ></command-palette-mode>
+        <command-palette-mode
+          data-char="@"
+            data-scope-types="[&quot;&quot;]"
+            data-placeholder="Search or jump to a user, organization, or repository"
+        ></command-palette-mode>
+        <command-palette-mode
+          data-char="@"
+            data-scope-types="[&quot;owner&quot;]"
+            data-placeholder="Search or jump to a repository"
+        ></command-palette-mode>
+        <command-palette-mode
+          data-char="/"
+            data-scope-types="[&quot;repository&quot;]"
+            data-placeholder="Search files"
+        ></command-palette-mode>
+        <command-palette-mode
+          data-char="?"
+        ></command-palette-mode>
+        <command-palette-mode
+          data-char="&gt;"
+            data-placeholder="Run a command"
+        ></command-palette-mode>
+        <command-palette-mode
+          data-char=""
+            data-scope-types="[&quot;&quot;]"
+            data-placeholder="Search or jump to..."
+        ></command-palette-mode>
+        <command-palette-mode
+          data-char=""
+            data-scope-types="[&quot;owner&quot;]"
+            data-placeholder="Search or jump to..."
+        ></command-palette-mode>
+      <command-palette-mode
+        class="js-command-palette-default-mode"
+        data-char=""
+        data-placeholder="Search or jump to..."
+      ></command-palette-mode>
+
+      <command-palette-input placeholder="Search or jump to..."
+
+        data-action="
+          command-palette-input:command-palette#onInput
+          command-palette-select:command-palette#onSelect
+          command-palette-descope:command-palette#onDescope
+          command-palette-cleared:command-palette#onInputClear
+        "
+      >
+        <div class="js-search-icon d-flex flex-items-center mr-2" style="height: 26px">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-search color-fg-muted">
+    <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path>
+</svg>
+        </div>
+        <div class="js-spinner d-flex flex-items-center mr-2 color-fg-muted" hidden>
+          <svg aria-label="Loading" class="anim-rotate" viewBox="0 0 16 16" fill="none" width="16" height="16">
+            <circle
+              cx="8"
+              cy="8"
+              r="7"
+              stroke="currentColor"
+              stroke-opacity="0.25"
+              stroke-width="2"
+              vector-effect="non-scaling-stroke"
+            ></circle>
+            <path
+              d="M15 8a7.002 7.002 0 00-7-7"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              vector-effect="non-scaling-stroke"
+            ></path>
+          </svg>
+        </div>
+        <command-palette-scope >
+          <div data-target="command-palette-scope.placeholder" hidden class="color-fg-subtle">/&nbsp;&nbsp;<span class="text-semibold color-fg-default">...</span>&nbsp;&nbsp;/&nbsp;&nbsp;</div>
+              <command-palette-token
+                data-text="pwqpol"
+                data-id="U_kgDOCMjPSA"
+                data-type="owner"
+                data-value="pwqpol"
+                data-targets="command-palette-scope.tokens"
+                class="color-fg-default text-semibold"
+                style="white-space:nowrap;line-height:20px;"
+                >pwqpol<span class="color-fg-subtle text-normal">&nbsp;&nbsp;/&nbsp;&nbsp;</span></command-palette-token>
+              <command-palette-token
+                data-text="dotfiles"
+                data-id="R_kgDOK_EirQ"
+                data-type="repository"
+                data-value="dotfiles"
+                data-targets="command-palette-scope.tokens"
+                class="color-fg-default text-semibold"
+                style="white-space:nowrap;line-height:20px;"
+                >dotfiles<span class="color-fg-subtle text-normal">&nbsp;&nbsp;/&nbsp;&nbsp;</span></command-palette-token>
+        </command-palette-scope>
+        <div class="command-palette-input-group flex-1 form-control border-0 box-shadow-none" style="z-index: 0">
+          <div class="command-palette-typeahead position-absolute d-flex flex-items-center Truncate">
+            <span class="typeahead-segment input-mirror" data-target="command-palette-input.mirror"></span>
+            <span class="Truncate-text" data-target="command-palette-input.typeaheadText"></span>
+            <span class="typeahead-segment" data-target="command-palette-input.typeaheadPlaceholder"></span>
+          </div>
+          <input
+            class="js-overlay-input typeahead-input d-none"
+            disabled
+            tabindex="-1"
+            aria-label="Hidden input for typeahead"
+          >
+          <input
+            type="text"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+            class="js-input typeahead-input form-control border-0 box-shadow-none input-block width-full no-focus-indicator"
+            aria-label="Command palette input"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-autocomplete="list"
+            aria-controls="command-palette-page-stack"
+            role="combobox"
+            data-action="
+              input:command-palette-input#onInput
+              keydown:command-palette-input#onKeydown
+            "
+          >
+        </div>
+          <div data-view-component="true" class="position-relative d-inline-block">
+    <button aria-keyshortcuts="Control+Backspace" data-action="click:command-palette-input#onClear keypress:command-palette-input#onClear" data-target="command-palette-input.clearButton" id="command-palette-clear-button" hidden="hidden" type="button" data-view-component="true" class="btn-octicon command-palette-input-clear-button">      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x-circle-fill">
+    <path d="M2.343 13.657A8 8 0 1 1 13.658 2.343 8 8 0 0 1 2.343 13.657ZM6.03 4.97a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042L6.94 8 4.97 9.97a.749.749 0 0 0 .326 1.275.749.749 0 0 0 .734-.215L8 9.06l1.97 1.97a.749.749 0 0 0 1.275-.326.749.749 0 0 0-.215-.734L9.06 8l1.97-1.97a.749.749 0 0 0-.326-1.275.749.749 0 0 0-.734.215L8 6.94Z"></path>
+</svg>
+</button>    <tool-tip id="tooltip-c1b7feec-6477-438e-aeaf-53204f5326e5" for="command-palette-clear-button" popover="manual" data-direction="w" data-type="label" data-view-component="true" class="sr-only position-absolute">Clear Command Palette</tool-tip>
+</div>
+      </command-palette-input>
+
+      <command-palette-page-stack
+        data-default-scope-id="R_kgDOK_EirQ"
+        data-default-scope-type="Repository"
+        data-action="command-palette-page-octicons-cached:command-palette-page-stack#cacheOcticons"
+      >
+          <command-palette-tip
+            class="color-fg-muted f6 px-3 py-1 my-2"
+              data-scope-types="[&quot;&quot;,&quot;owner&quot;,&quot;repository&quot;]"
+            data-mode=""
+            data-value="">
+            <div class="d-flex flex-items-start flex-justify-between">
+              <div>
+                <span class="text-bold">Tip:</span>
+                  Type <kbd class="hx_kbd">#</kbd> to search pull requests
+              </div>
+              <div class="ml-2 flex-shrink-0">
+                Type <kbd class="hx_kbd">?</kbd> for help and tips
+              </div>
+            </div>
+          </command-palette-tip>
+          <command-palette-tip
+            class="color-fg-muted f6 px-3 py-1 my-2"
+              data-scope-types="[&quot;&quot;,&quot;owner&quot;,&quot;repository&quot;]"
+            data-mode=""
+            data-value="">
+            <div class="d-flex flex-items-start flex-justify-between">
+              <div>
+                <span class="text-bold">Tip:</span>
+                  Type <kbd class="hx_kbd">#</kbd> to search issues
+              </div>
+              <div class="ml-2 flex-shrink-0">
+                Type <kbd class="hx_kbd">?</kbd> for help and tips
+              </div>
+            </div>
+          </command-palette-tip>
+          <command-palette-tip
+            class="color-fg-muted f6 px-3 py-1 my-2"
+              data-scope-types="[&quot;owner&quot;,&quot;repository&quot;]"
+            data-mode=""
+            data-value="">
+            <div class="d-flex flex-items-start flex-justify-between">
+              <div>
+                <span class="text-bold">Tip:</span>
+                  Type <kbd class="hx_kbd">#</kbd> to search discussions
+              </div>
+              <div class="ml-2 flex-shrink-0">
+                Type <kbd class="hx_kbd">?</kbd> for help and tips
+              </div>
+            </div>
+          </command-palette-tip>
+          <command-palette-tip
+            class="color-fg-muted f6 px-3 py-1 my-2"
+              data-scope-types="[&quot;owner&quot;,&quot;repository&quot;]"
+            data-mode=""
+            data-value="">
+            <div class="d-flex flex-items-start flex-justify-between">
+              <div>
+                <span class="text-bold">Tip:</span>
+                  Type <kbd class="hx_kbd">!</kbd> to search projects
+              </div>
+              <div class="ml-2 flex-shrink-0">
+                Type <kbd class="hx_kbd">?</kbd> for help and tips
+              </div>
+            </div>
+          </command-palette-tip>
+          <command-palette-tip
+            class="color-fg-muted f6 px-3 py-1 my-2"
+              data-scope-types="[&quot;owner&quot;]"
+            data-mode=""
+            data-value="">
+            <div class="d-flex flex-items-start flex-justify-between">
+              <div>
+                <span class="text-bold">Tip:</span>
+                  Type <kbd class="hx_kbd">@</kbd> to search teams
+              </div>
+              <div class="ml-2 flex-shrink-0">
+                Type <kbd class="hx_kbd">?</kbd> for help and tips
+              </div>
+            </div>
+          </command-palette-tip>
+          <command-palette-tip
+            class="color-fg-muted f6 px-3 py-1 my-2"
+              data-scope-types="[&quot;&quot;]"
+            data-mode=""
+            data-value="">
+            <div class="d-flex flex-items-start flex-justify-between">
+              <div>
+                <span class="text-bold">Tip:</span>
+                  Type <kbd class="hx_kbd">@</kbd> to search people and organizations
+              </div>
+              <div class="ml-2 flex-shrink-0">
+                Type <kbd class="hx_kbd">?</kbd> for help and tips
+              </div>
+            </div>
+          </command-palette-tip>
+          <command-palette-tip
+            class="color-fg-muted f6 px-3 py-1 my-2"
+              data-scope-types="[&quot;&quot;,&quot;owner&quot;,&quot;repository&quot;]"
+            data-mode=""
+            data-value="">
+            <div class="d-flex flex-items-start flex-justify-between">
+              <div>
+                <span class="text-bold">Tip:</span>
+                  Type <kbd class="hx_kbd">&gt;</kbd> to activate command mode
+              </div>
+              <div class="ml-2 flex-shrink-0">
+                Type <kbd class="hx_kbd">?</kbd> for help and tips
+              </div>
+            </div>
+          </command-palette-tip>
+          <command-palette-tip
+            class="color-fg-muted f6 px-3 py-1 my-2"
+              data-scope-types="[&quot;&quot;,&quot;owner&quot;,&quot;repository&quot;]"
+            data-mode=""
+            data-value="">
+            <div class="d-flex flex-items-start flex-justify-between">
+              <div>
+                <span class="text-bold">Tip:</span>
+                  Go to your accessibility settings to change your keyboard shortcuts
+              </div>
+              <div class="ml-2 flex-shrink-0">
+                Type <kbd class="hx_kbd">?</kbd> for help and tips
+              </div>
+            </div>
+          </command-palette-tip>
+          <command-palette-tip
+            class="color-fg-muted f6 px-3 py-1 my-2"
+              data-scope-types="[&quot;&quot;,&quot;owner&quot;,&quot;repository&quot;]"
+            data-mode="#"
+            data-value="">
+            <div class="d-flex flex-items-start flex-justify-between">
+              <div>
+                <span class="text-bold">Tip:</span>
+                  Type author:@me to search your content
+              </div>
+              <div class="ml-2 flex-shrink-0">
+                Type <kbd class="hx_kbd">?</kbd> for help and tips
+              </div>
+            </div>
+          </command-palette-tip>
+          <command-palette-tip
+            class="color-fg-muted f6 px-3 py-1 my-2"
+              data-scope-types="[&quot;&quot;,&quot;owner&quot;,&quot;repository&quot;]"
+            data-mode="#"
+            data-value="">
+            <div class="d-flex flex-items-start flex-justify-between">
+              <div>
+                <span class="text-bold">Tip:</span>
+                  Type is:pr to filter to pull requests
+              </div>
+              <div class="ml-2 flex-shrink-0">
+                Type <kbd class="hx_kbd">?</kbd> for help and tips
+              </div>
+            </div>
+          </command-palette-tip>
+          <command-palette-tip
+            class="color-fg-muted f6 px-3 py-1 my-2"
+              data-scope-types="[&quot;&quot;,&quot;owner&quot;,&quot;repository&quot;]"
+            data-mode="#"
+            data-value="">
+            <div class="d-flex flex-items-start flex-justify-between">
+              <div>
+                <span class="text-bold">Tip:</span>
+                  Type is:issue to filter to issues
+              </div>
+              <div class="ml-2 flex-shrink-0">
+                Type <kbd class="hx_kbd">?</kbd> for help and tips
+              </div>
+            </div>
+          </command-palette-tip>
+          <command-palette-tip
+            class="color-fg-muted f6 px-3 py-1 my-2"
+              data-scope-types="[&quot;owner&quot;,&quot;repository&quot;]"
+            data-mode="#"
+            data-value="">
+            <div class="d-flex flex-items-start flex-justify-between">
+              <div>
+                <span class="text-bold">Tip:</span>
+                  Type is:project to filter to projects
+              </div>
+              <div class="ml-2 flex-shrink-0">
+                Type <kbd class="hx_kbd">?</kbd> for help and tips
+              </div>
+            </div>
+          </command-palette-tip>
+          <command-palette-tip
+            class="color-fg-muted f6 px-3 py-1 my-2"
+              data-scope-types="[&quot;&quot;,&quot;owner&quot;,&quot;repository&quot;]"
+            data-mode="#"
+            data-value="">
+            <div class="d-flex flex-items-start flex-justify-between">
+              <div>
+                <span class="text-bold">Tip:</span>
+                  Type is:open to filter to open content
+              </div>
+              <div class="ml-2 flex-shrink-0">
+                Type <kbd class="hx_kbd">?</kbd> for help and tips
+              </div>
+            </div>
+          </command-palette-tip>
+        <command-palette-tip class="mx-3 my-2 flash flash-error d-flex flex-items-center" data-scope-types="*" data-on-error>
+          <div>
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+          </div>
+          <div class="px-2">
+            We’ve encountered an error and some results aren't available at this time. Type a new search or try again later.
+          </div>
+        </command-palette-tip>
+        <command-palette-tip class="h4 color-fg-default pl-3 pb-2 pt-3" data-on-empty data-scope-types="*" data-match-mode="[^?]|^$">
+          No results matched your search
+        </command-palette-tip>
+
+        <div hidden>
+
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="arrow-right-color-fg-muted">
+              <svg height="16" class="octicon octicon-arrow-right color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="arrow-right-color-fg-default">
+              <svg height="16" class="octicon octicon-arrow-right color-fg-default" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="codespaces-color-fg-muted">
+              <svg height="16" class="octicon octicon-codespaces color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M0 11.25c0-.966.784-1.75 1.75-1.75h12.5c.966 0 1.75.784 1.75 1.75v3A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25Zm2-9.5C2 .784 2.784 0 3.75 0h8.5C13.216 0 14 .784 14 1.75v5a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 2 6.75Zm1.75-.25a.25.25 0 0 0-.25.25v5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5a.25.25 0 0 0-.25-.25Zm-2 9.5a.25.25 0 0 0-.25.25v3c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-3a.25.25 0 0 0-.25-.25Z"></path><path d="M7 12.75a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Zm-4 0a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="copy-color-fg-muted">
+              <svg height="16" class="octicon octicon-copy color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="dash-color-fg-muted">
+              <svg height="16" class="octicon octicon-dash color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M2 7.75A.75.75 0 0 1 2.75 7h10a.75.75 0 0 1 0 1.5h-10A.75.75 0 0 1 2 7.75Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="file-color-fg-muted">
+              <svg height="16" class="octicon octicon-file color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="gear-color-fg-muted">
+              <svg height="16" class="octicon octicon-gear color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M8 0a8.2 8.2 0 0 1 .701.031C9.444.095 9.99.645 10.16 1.29l.288 1.107c.018.066.079.158.212.224.231.114.454.243.668.386.123.082.233.09.299.071l1.103-.303c.644-.176 1.392.021 1.82.63.27.385.506.792.704 1.218.315.675.111 1.422-.364 1.891l-.814.806c-.049.048-.098.147-.088.294.016.257.016.515 0 .772-.01.147.038.246.088.294l.814.806c.475.469.679 1.216.364 1.891a7.977 7.977 0 0 1-.704 1.217c-.428.61-1.176.807-1.82.63l-1.102-.302c-.067-.019-.177-.011-.3.071a5.909 5.909 0 0 1-.668.386c-.133.066-.194.158-.211.224l-.29 1.106c-.168.646-.715 1.196-1.458 1.26a8.006 8.006 0 0 1-1.402 0c-.743-.064-1.289-.614-1.458-1.26l-.289-1.106c-.018-.066-.079-.158-.212-.224a5.738 5.738 0 0 1-.668-.386c-.123-.082-.233-.09-.299-.071l-1.103.303c-.644.176-1.392-.021-1.82-.63a8.12 8.12 0 0 1-.704-1.218c-.315-.675-.111-1.422.363-1.891l.815-.806c.05-.048.098-.147.088-.294a6.214 6.214 0 0 1 0-.772c.01-.147-.038-.246-.088-.294l-.815-.806C.635 6.045.431 5.298.746 4.623a7.92 7.92 0 0 1 .704-1.217c.428-.61 1.176-.807 1.82-.63l1.102.302c.067.019.177.011.3-.071.214-.143.437-.272.668-.386.133-.066.194-.158.211-.224l.29-1.106C6.009.645 6.556.095 7.299.03 7.53.01 7.764 0 8 0Zm-.571 1.525c-.036.003-.108.036-.137.146l-.289 1.105c-.147.561-.549.967-.998 1.189-.173.086-.34.183-.5.29-.417.278-.97.423-1.529.27l-1.103-.303c-.109-.03-.175.016-.195.045-.22.312-.412.644-.573.99-.014.031-.021.11.059.19l.815.806c.411.406.562.957.53 1.456a4.709 4.709 0 0 0 0 .582c.032.499-.119 1.05-.53 1.456l-.815.806c-.081.08-.073.159-.059.19.162.346.353.677.573.989.02.03.085.076.195.046l1.102-.303c.56-.153 1.113-.008 1.53.27.161.107.328.204.501.29.447.222.85.629.997 1.189l.289 1.105c.029.109.101.143.137.146a6.6 6.6 0 0 0 1.142 0c.036-.003.108-.036.137-.146l.289-1.105c.147-.561.549-.967.998-1.189.173-.086.34-.183.5-.29.417-.278.97-.423 1.529-.27l1.103.303c.109.029.175-.016.195-.045.22-.313.411-.644.573-.99.014-.031.021-.11-.059-.19l-.815-.806c-.411-.406-.562-.957-.53-1.456a4.709 4.709 0 0 0 0-.582c-.032-.499.119-1.05.53-1.456l.815-.806c.081-.08.073-.159.059-.19a6.464 6.464 0 0 0-.573-.989c-.02-.03-.085-.076-.195-.046l-1.102.303c-.56.153-1.113.008-1.53-.27a4.44 4.44 0 0 0-.501-.29c-.447-.222-.85-.629-.997-1.189l-.289-1.105c-.029-.11-.101-.143-.137-.146a6.6 6.6 0 0 0-1.142 0ZM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM9.5 8a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 9.5 8Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="lock-color-fg-muted">
+              <svg height="16" class="octicon octicon-lock color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M4 4a4 4 0 0 1 8 0v2h.25c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 12.25 15h-8.5A1.75 1.75 0 0 1 2 13.25v-5.5C2 6.784 2.784 6 3.75 6H4Zm8.25 3.5h-8.5a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25ZM10.5 6V4a2.5 2.5 0 1 0-5 0v2Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="moon-color-fg-muted">
+              <svg height="16" class="octicon octicon-moon color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M9.598 1.591a.749.749 0 0 1 .785-.175 7.001 7.001 0 1 1-8.967 8.967.75.75 0 0 1 .961-.96 5.5 5.5 0 0 0 7.046-7.046.75.75 0 0 1 .175-.786Zm1.616 1.945a7 7 0 0 1-7.678 7.678 5.499 5.499 0 1 0 7.678-7.678Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="person-color-fg-muted">
+              <svg height="16" class="octicon octicon-person color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M10.561 8.073a6.005 6.005 0 0 1 3.432 5.142.75.75 0 1 1-1.498.07 4.5 4.5 0 0 0-8.99 0 .75.75 0 0 1-1.498-.07 6.004 6.004 0 0 1 3.431-5.142 3.999 3.999 0 1 1 5.123 0ZM10.5 5a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="pencil-color-fg-muted">
+              <svg height="16" class="octicon octicon-pencil color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="issue-opened-open">
+              <svg height="16" class="octicon octicon-issue-opened open" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="git-pull-request-draft-color-fg-muted">
+              <svg height="16" class="octicon octicon-git-pull-request-draft color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M3.25 1A2.25 2.25 0 0 1 4 5.372v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.251 2.251 0 0 1 3.25 1Zm9.5 14a2.25 2.25 0 1 1 0-4.5 2.25 2.25 0 0 1 0 4.5ZM2.5 3.25a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0ZM3.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm9.5 0a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM14 7.5a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Zm0-4.25a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="search-color-fg-muted">
+              <svg height="16" class="octicon octicon-search color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="sun-color-fg-muted">
+              <svg height="16" class="octicon octicon-sun color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm5.657-8.157a.75.75 0 0 1 0 1.061l-1.061 1.06a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0ZM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0ZM3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8Zm13 0a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8Zm-8 5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13Zm3.536-1.464a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061ZM2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.06-1.06a.75.75 0 0 1 0-1.06Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="sync-color-fg-muted">
+              <svg height="16" class="octicon octicon-sync color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="trash-color-fg-muted">
+              <svg height="16" class="octicon octicon-trash color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M11 1.75V3h2.25a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75ZM4.496 6.675l.66 6.6a.25.25 0 0 0 .249.225h5.19a.25.25 0 0 0 .249-.225l.66-6.6a.75.75 0 0 1 1.492.149l-.66 6.6A1.748 1.748 0 0 1 10.595 15h-5.19a1.75 1.75 0 0 1-1.741-1.575l-.66-6.6a.75.75 0 1 1 1.492-.15ZM6.5 1.75V3h3V1.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="key-color-fg-muted">
+              <svg height="16" class="octicon octicon-key color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M10.5 0a5.499 5.499 0 1 1-1.288 10.848l-.932.932a.749.749 0 0 1-.53.22H7v.75a.749.749 0 0 1-.22.53l-.5.5a.749.749 0 0 1-.53.22H5v.75a.749.749 0 0 1-.22.53l-.5.5a.749.749 0 0 1-.53.22h-2A1.75 1.75 0 0 1 0 14.25v-2c0-.199.079-.389.22-.53l4.932-4.932A5.5 5.5 0 0 1 10.5 0Zm-4 5.5c-.001.431.069.86.205 1.269a.75.75 0 0 1-.181.768L1.5 12.56v1.69c0 .138.112.25.25.25h1.69l.06-.06v-1.19a.75.75 0 0 1 .75-.75h1.19l.06-.06v-1.19a.75.75 0 0 1 .75-.75h1.19l1.023-1.025a.75.75 0 0 1 .768-.18A4 4 0 1 0 6.5 5.5ZM11 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="comment-discussion-color-fg-muted">
+              <svg height="16" class="octicon octicon-comment-discussion color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.061l-2.574 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.458 1.458 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h1a.25.25 0 0 0 .25-.25Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="bell-color-fg-muted">
+              <svg height="16" class="octicon octicon-bell color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M8 16a2 2 0 0 0 1.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 0 0 8 16ZM3 5a5 5 0 0 1 10 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.519 1.519 0 0 1 13.482 13H2.518a1.516 1.516 0 0 1-1.263-2.36l1.703-2.554A.255.255 0 0 0 3 7.947Zm5-3.5A3.5 3.5 0 0 0 4.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.017.017 0 0 0-.003.01l.001.006c0 .002.002.004.004.006l.006.004.007.001h10.964l.007-.001.006-.004.004-.006.001-.007a.017.017 0 0 0-.003-.01l-1.703-2.554a1.745 1.745 0 0 1-.294-.97V5A3.5 3.5 0 0 0 8 1.5Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="bell-slash-color-fg-muted">
+              <svg height="16" class="octicon octicon-bell-slash color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="m4.182 4.31.016.011 10.104 7.316.013.01 1.375.996a.75.75 0 1 1-.88 1.214L13.626 13H2.518a1.516 1.516 0 0 1-1.263-2.36l1.703-2.554A.255.255 0 0 0 3 7.947V5.305L.31 3.357a.75.75 0 1 1 .88-1.214Zm7.373 7.19L4.5 6.391v1.556c0 .346-.102.683-.294.97l-1.703 2.556a.017.017 0 0 0-.003.01c0 .005.002.009.005.012l.006.004.007.001ZM8 1.5c-.997 0-1.895.416-2.534 1.086A.75.75 0 1 1 4.38 1.55 5 5 0 0 1 13 5v2.373a.75.75 0 0 1-1.5 0V5A3.5 3.5 0 0 0 8 1.5ZM8 16a2 2 0 0 1-1.985-1.75c-.017-.137.097-.25.235-.25h3.5c.138 0 .252.113.235.25A2 2 0 0 1 8 16Z"></path></svg>
+            </div>
+            <div data-targets="command-palette-page-stack.localOcticons" data-octicon-id="paintbrush-color-fg-muted">
+              <svg height="16" class="octicon octicon-paintbrush color-fg-muted" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path d="M11.134 1.535c.7-.509 1.416-.942 2.076-1.155.649-.21 1.463-.267 2.069.34.603.601.568 1.411.368 2.07-.202.668-.624 1.39-1.125 2.096-1.011 1.424-2.496 2.987-3.775 4.249-1.098 1.084-2.132 1.839-3.04 2.3a3.744 3.744 0 0 1-1.055 3.217c-.431.431-1.065.691-1.657.861-.614.177-1.294.287-1.914.357A21.151 21.151 0 0 1 .797 16H.743l.007-.75H.749L.742 16a.75.75 0 0 1-.743-.742l.743-.008-.742.007v-.054a21.25 21.25 0 0 1 .13-2.284c.067-.647.187-1.287.358-1.914.17-.591.43-1.226.86-1.657a3.746 3.746 0 0 1 3.227-1.054c.466-.893 1.225-1.907 2.314-2.982 1.271-1.255 2.833-2.75 4.245-3.777ZM1.62 13.089c-.051.464-.086.929-.104 1.395.466-.018.932-.053 1.396-.104a10.511 10.511 0 0 0 1.668-.309c.526-.151.856-.325 1.011-.48a2.25 2.25 0 1 0-3.182-3.182c-.155.155-.329.485-.48 1.01a10.515 10.515 0 0 0-.309 1.67Zm10.396-10.34c-1.224.89-2.605 2.189-3.822 3.384l1.718 1.718c1.21-1.205 2.51-2.597 3.387-3.833.47-.662.78-1.227.912-1.662.134-.444.032-.551.009-.575h-.001V1.78c-.014-.014-.113-.113-.548.027-.432.14-.995.462-1.655.942Zm-4.832 7.266-.001.001a9.859 9.859 0 0 0 1.63-1.142L7.155 7.216a9.7 9.7 0 0 0-1.161 1.607c.482.302.889.71 1.19 1.192Z"></path></svg>
+            </div>
+
+            <command-palette-item-group
+              data-group-id="top"
+              data-group-title="Top result"
+              data-group-hint=""
+              data-group-limits="{}"
+              data-default-priority="0"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="commands"
+              data-group-title="Commands"
+              data-group-hint="Type &gt; to filter"
+              data-group-limits="{&quot;static_items_page&quot;:50,&quot;issue&quot;:50,&quot;pull_request&quot;:50,&quot;discussion&quot;:50}"
+              data-default-priority="1"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="global_commands"
+              data-group-title="Global Commands"
+              data-group-hint="Type &gt; to filter"
+              data-group-limits="{&quot;issue&quot;:0,&quot;pull_request&quot;:0,&quot;discussion&quot;:0}"
+              data-default-priority="2"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="this_page"
+              data-group-title="This Page"
+              data-group-hint=""
+              data-group-limits="{}"
+              data-default-priority="3"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="files"
+              data-group-title="Files"
+              data-group-hint=""
+              data-group-limits="{}"
+              data-default-priority="4"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="default"
+              data-group-title="Default"
+              data-group-hint=""
+              data-group-limits="{&quot;static_items_page&quot;:50}"
+              data-default-priority="5"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="pages"
+              data-group-title="Pages"
+              data-group-hint=""
+              data-group-limits="{&quot;repository&quot;:10}"
+              data-default-priority="6"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="access_policies"
+              data-group-title="Access Policies"
+              data-group-hint=""
+              data-group-limits="{}"
+              data-default-priority="7"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="organizations"
+              data-group-title="Organizations"
+              data-group-hint=""
+              data-group-limits="{}"
+              data-default-priority="8"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="repositories"
+              data-group-title="Repositories"
+              data-group-hint=""
+              data-group-limits="{}"
+              data-default-priority="9"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="references"
+              data-group-title="Issues, pull requests, and discussions"
+              data-group-hint="Type # to filter"
+              data-group-limits="{}"
+              data-default-priority="10"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="teams"
+              data-group-title="Teams"
+              data-group-hint=""
+              data-group-limits="{}"
+              data-default-priority="11"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="users"
+              data-group-title="Users"
+              data-group-hint=""
+              data-group-limits="{}"
+              data-default-priority="12"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="memex_projects"
+              data-group-title="Projects"
+              data-group-hint=""
+              data-group-limits="{}"
+              data-default-priority="13"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="projects"
+              data-group-title="Projects (classic)"
+              data-group-hint=""
+              data-group-limits="{}"
+              data-default-priority="14"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="footer"
+              data-group-title="Footer"
+              data-group-hint=""
+              data-group-limits="{}"
+              data-default-priority="15"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="modes_help"
+              data-group-title="Modes"
+              data-group-hint=""
+              data-group-limits="{}"
+              data-default-priority="16"
+            >
+            </command-palette-item-group>
+            <command-palette-item-group
+              data-group-id="filters_help"
+              data-group-title="Use filters in issues, pull requests, discussions, and projects"
+              data-group-hint=""
+              data-group-limits="{}"
+              data-default-priority="17"
+            >
+            </command-palette-item-group>
+
+            <command-palette-page
+              data-page-title="pwqpol"
+              data-scope-id="U_kgDOCMjPSA"
+              data-scope-type="owner"
+              data-targets="command-palette-page-stack.defaultPages"
+              hidden
+            >
+            </command-palette-page>
+            <command-palette-page
+              data-page-title="dotfiles"
+              data-scope-id="R_kgDOK_EirQ"
+              data-scope-type="repository"
+              data-targets="command-palette-page-stack.defaultPages"
+              hidden
+            >
+            </command-palette-page>
+        </div>
+
+        <command-palette-page data-is-root>
+        </command-palette-page>
+          <command-palette-page
+            data-page-title="pwqpol"
+            data-scope-id="U_kgDOCMjPSA"
+            data-scope-type="owner"
+          >
+          </command-palette-page>
+          <command-palette-page
+            data-page-title="dotfiles"
+            data-scope-id="R_kgDOK_EirQ"
+            data-scope-type="repository"
+          >
+          </command-palette-page>
+      </command-palette-page-stack>
+
+      <server-defined-provider data-type="search-links" data-targets="command-palette.serverDefinedProviderElements"></server-defined-provider>
+      <server-defined-provider data-type="help" data-targets="command-palette.serverDefinedProviderElements">
+          <command-palette-help
+            data-group="modes_help"
+              data-prefix="#"
+              data-scope-types="[&quot;&quot;]"
+          >
+            <span data-target="command-palette-help.titleElement">Search for <strong>issues</strong> and <strong>pull requests</strong></span>
+              <span data-target="command-palette-help.hintElement">
+                <kbd class="hx_kbd">#</kbd>
+              </span>
+          </command-palette-help>
+          <command-palette-help
+            data-group="modes_help"
+              data-prefix="#"
+              data-scope-types="[&quot;owner&quot;,&quot;repository&quot;]"
+          >
+            <span data-target="command-palette-help.titleElement">Search for <strong>issues, pull requests, discussions,</strong> and <strong>projects</strong></span>
+              <span data-target="command-palette-help.hintElement">
+                <kbd class="hx_kbd">#</kbd>
+              </span>
+          </command-palette-help>
+          <command-palette-help
+            data-group="modes_help"
+              data-prefix="@"
+              data-scope-types="[&quot;&quot;]"
+          >
+            <span data-target="command-palette-help.titleElement">Search for <strong>organizations, repositories,</strong> and <strong>users</strong></span>
+              <span data-target="command-palette-help.hintElement">
+                <kbd class="hx_kbd">@</kbd>
+              </span>
+          </command-palette-help>
+          <command-palette-help
+            data-group="modes_help"
+              data-prefix="!"
+              data-scope-types="[&quot;owner&quot;,&quot;repository&quot;]"
+          >
+            <span data-target="command-palette-help.titleElement">Search for <strong>projects</strong></span>
+              <span data-target="command-palette-help.hintElement">
+                <kbd class="hx_kbd">!</kbd>
+              </span>
+          </command-palette-help>
+          <command-palette-help
+            data-group="modes_help"
+              data-prefix="/"
+              data-scope-types="[&quot;repository&quot;]"
+          >
+            <span data-target="command-palette-help.titleElement">Search for <strong>files</strong></span>
+              <span data-target="command-palette-help.hintElement">
+                <kbd class="hx_kbd">/</kbd>
+              </span>
+          </command-palette-help>
+          <command-palette-help
+            data-group="modes_help"
+              data-prefix="&gt;"
+          >
+            <span data-target="command-palette-help.titleElement">Activate <strong>command mode</strong></span>
+              <span data-target="command-palette-help.hintElement">
+                <kbd class="hx_kbd">&gt;</kbd>
+              </span>
+          </command-palette-help>
+          <command-palette-help
+            data-group="filters_help"
+              data-prefix="# author:@me"
+          >
+            <span data-target="command-palette-help.titleElement">Search your issues, pull requests, and discussions</span>
+              <span data-target="command-palette-help.hintElement">
+                <kbd class="hx_kbd"># author:@me</kbd>
+              </span>
+          </command-palette-help>
+          <command-palette-help
+            data-group="filters_help"
+              data-prefix="# author:@me"
+          >
+            <span data-target="command-palette-help.titleElement">Search your issues, pull requests, and discussions</span>
+              <span data-target="command-palette-help.hintElement">
+                <kbd class="hx_kbd"># author:@me</kbd>
+              </span>
+          </command-palette-help>
+          <command-palette-help
+            data-group="filters_help"
+              data-prefix="# is:pr"
+          >
+            <span data-target="command-palette-help.titleElement">Filter to pull requests</span>
+              <span data-target="command-palette-help.hintElement">
+                <kbd class="hx_kbd"># is:pr</kbd>
+              </span>
+          </command-palette-help>
+          <command-palette-help
+            data-group="filters_help"
+              data-prefix="# is:issue"
+          >
+            <span data-target="command-palette-help.titleElement">Filter to issues</span>
+              <span data-target="command-palette-help.hintElement">
+                <kbd class="hx_kbd"># is:issue</kbd>
+              </span>
+          </command-palette-help>
+          <command-palette-help
+            data-group="filters_help"
+              data-prefix="# is:discussion"
+              data-scope-types="[&quot;owner&quot;,&quot;repository&quot;]"
+          >
+            <span data-target="command-palette-help.titleElement">Filter to discussions</span>
+              <span data-target="command-palette-help.hintElement">
+                <kbd class="hx_kbd"># is:discussion</kbd>
+              </span>
+          </command-palette-help>
+          <command-palette-help
+            data-group="filters_help"
+              data-prefix="# is:project"
+              data-scope-types="[&quot;owner&quot;,&quot;repository&quot;]"
+          >
+            <span data-target="command-palette-help.titleElement">Filter to projects</span>
+              <span data-target="command-palette-help.hintElement">
+                <kbd class="hx_kbd"># is:project</kbd>
+              </span>
+          </command-palette-help>
+          <command-palette-help
+            data-group="filters_help"
+              data-prefix="# is:open"
+          >
+            <span data-target="command-palette-help.titleElement">Filter to open issues, pull requests, and discussions</span>
+              <span data-target="command-palette-help.hintElement">
+                <kbd class="hx_kbd"># is:open</kbd>
+              </span>
+          </command-palette-help>
+      </server-defined-provider>
+
+        <server-defined-provider
+          data-type="commands"
+          data-fetch-debounce="0"
+            data-src="/command_palette/commands"
+          data-supported-modes="[]"
+            data-supports-commands
+          
+          data-targets="command-palette.serverDefinedProviderElements"
+          ></server-defined-provider>
+        <server-defined-provider
+          data-type="prefetched"
+          data-fetch-debounce="0"
+            data-src="/command_palette/jump_to_page_navigation"
+          data-supported-modes="[&quot;&quot;]"
+            data-supported-scope-types="[&quot;&quot;,&quot;owner&quot;,&quot;repository&quot;]"
+          
+          data-targets="command-palette.serverDefinedProviderElements"
+          ></server-defined-provider>
+        <server-defined-provider
+          data-type="remote"
+          data-fetch-debounce="200"
+            data-src="/command_palette/issues"
+          data-supported-modes="[&quot;#&quot;,&quot;#&quot;]"
+            data-supported-scope-types="[&quot;owner&quot;,&quot;repository&quot;,&quot;&quot;]"
+          
+          data-targets="command-palette.serverDefinedProviderElements"
+          ></server-defined-provider>
+        <server-defined-provider
+          data-type="remote"
+          data-fetch-debounce="200"
+            data-src="/command_palette/jump_to"
+          data-supported-modes="[&quot;@&quot;,&quot;@&quot;]"
+            data-supported-scope-types="[&quot;&quot;,&quot;owner&quot;]"
+          
+          data-targets="command-palette.serverDefinedProviderElements"
+          ></server-defined-provider>
+        <server-defined-provider
+          data-type="remote"
+          data-fetch-debounce="200"
+            data-src="/command_palette/jump_to_members_only"
+          data-supported-modes="[&quot;@&quot;,&quot;@&quot;,&quot;&quot;,&quot;&quot;]"
+            data-supported-scope-types="[&quot;&quot;,&quot;owner&quot;]"
+          
+          data-targets="command-palette.serverDefinedProviderElements"
+          ></server-defined-provider>
+        <server-defined-provider
+          data-type="prefetched"
+          data-fetch-debounce="0"
+            data-src="/command_palette/jump_to_members_only_prefetched"
+          data-supported-modes="[&quot;@&quot;,&quot;@&quot;,&quot;&quot;,&quot;&quot;]"
+            data-supported-scope-types="[&quot;&quot;,&quot;owner&quot;]"
+          
+          data-targets="command-palette.serverDefinedProviderElements"
+          ></server-defined-provider>
+        <server-defined-provider
+          data-type="files"
+          data-fetch-debounce="0"
+            data-src="/command_palette/files"
+          data-supported-modes="[&quot;/&quot;]"
+            data-supported-scope-types="[&quot;repository&quot;]"
+          
+          data-targets="command-palette.serverDefinedProviderElements"
+          ></server-defined-provider>
+        <server-defined-provider
+          data-type="remote"
+          data-fetch-debounce="200"
+            data-src="/command_palette/discussions"
+          data-supported-modes="[&quot;#&quot;]"
+            data-supported-scope-types="[&quot;owner&quot;,&quot;repository&quot;]"
+          
+          data-targets="command-palette.serverDefinedProviderElements"
+          ></server-defined-provider>
+        <server-defined-provider
+          data-type="remote"
+          data-fetch-debounce="200"
+            data-src="/command_palette/projects"
+          data-supported-modes="[&quot;#&quot;,&quot;!&quot;]"
+            data-supported-scope-types="[&quot;owner&quot;,&quot;repository&quot;]"
+          
+          data-targets="command-palette.serverDefinedProviderElements"
+          ></server-defined-provider>
+        <server-defined-provider
+          data-type="prefetched"
+          data-fetch-debounce="0"
+            data-src="/command_palette/recent_issues"
+          data-supported-modes="[&quot;#&quot;,&quot;#&quot;]"
+            data-supported-scope-types="[&quot;owner&quot;,&quot;repository&quot;,&quot;&quot;]"
+          
+          data-targets="command-palette.serverDefinedProviderElements"
+          ></server-defined-provider>
+        <server-defined-provider
+          data-type="remote"
+          data-fetch-debounce="200"
+            data-src="/command_palette/teams"
+          data-supported-modes="[&quot;@&quot;,&quot;&quot;]"
+            data-supported-scope-types="[&quot;owner&quot;]"
+          
+          data-targets="command-palette.serverDefinedProviderElements"
+          ></server-defined-provider>
+        <server-defined-provider
+          data-type="remote"
+          data-fetch-debounce="200"
+            data-src="/command_palette/name_with_owner_repository"
+          data-supported-modes="[&quot;@&quot;,&quot;@&quot;,&quot;&quot;,&quot;&quot;]"
+            data-supported-scope-types="[&quot;&quot;,&quot;owner&quot;]"
+          
+          data-targets="command-palette.serverDefinedProviderElements"
+          ></server-defined-provider>
+    </command-palette>
+  </details-dialog>
+</details>
+
+<div class="position-fixed bottom-0 left-0 ml-5 mb-5 js-command-palette-toasts" style="z-index: 1000">
+  <div hidden class="Toast Toast--loading">
+    <span class="Toast-icon">
+      <svg class="Toast--spinner" viewBox="0 0 32 32" width="18" height="18" aria-hidden="true">
+        <path
+          fill="#959da5"
+          d="M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4"
+        />
+        <path fill="#ffffff" d="M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z"></path>
+      </svg>
+    </span>
+    <span class="Toast-content"></span>
+  </div>
+
+  <div hidden class="anim-fade-in fast Toast Toast--error">
+    <span class="Toast-icon">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-stop">
+    <path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path>
+</svg>
+    </span>
+    <span class="Toast-content"></span>
+  </div>
+
+  <div hidden class="anim-fade-in fast Toast Toast--warning">
+    <span class="Toast-icon">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+    </span>
+    <span class="Toast-content"></span>
+  </div>
+
+
+  <div hidden class="anim-fade-in fast Toast Toast--success">
+    <span class="Toast-icon">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </span>
+    <span class="Toast-content"></span>
+  </div>
+
+  <div hidden class="anim-fade-in fast Toast">
+    <span class="Toast-icon">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-info">
+    <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path>
+</svg>
+    </span>
+    <span class="Toast-content"></span>
+  </div>
+</div>
+
+
+            
+  <div id="repository-container-header" data-turbo-replace hidden></div>
+
+
+
+
+
+
+
+
+
+
+
+  <turbo-frame id="repo-content-turbo-frame" target="_top" data-turbo-action="advance" class="">
+    
+    
+  <h1 class='sr-only'>Settings: pwqpol/dotfiles</h1>
+  <div class="clearfix container-xl px-3 px-md-4 px-lg-5 mt-4">
+    <div data-view-component="true" class="Layout Layout--sidebarPosition-start Layout--sidebarPosition-flowRow-start">
+  
+  <div data-view-component="true" class="Layout-sidebar">        
+
+<div data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame">
+  <nav aria-label="General settings" item_classes="repo-menu-item" data-view-component="true">
+  
+  <nav-list>
+    <ul data-view-component="true" class="ActionListWrap">
+        
+          
+<li data-targets="nav-list.items nav-list.items" data-item-id="repo_settings" data-view-component="true" class="ActionListItem ActionListItem--navActive">
+    
+    <a id="item-3a4129e4-5886-489e-9fdc-96de9c95f188" href="/pwqpol/dotfiles/settings" aria-current="page" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+        <span class="ActionListItem-visual ActionListItem-visual--leading">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-gear">
+    <path d="M8 0a8.2 8.2 0 0 1 .701.031C9.444.095 9.99.645 10.16 1.29l.288 1.107c.018.066.079.158.212.224.231.114.454.243.668.386.123.082.233.09.299.071l1.103-.303c.644-.176 1.392.021 1.82.63.27.385.506.792.704 1.218.315.675.111 1.422-.364 1.891l-.814.806c-.049.048-.098.147-.088.294.016.257.016.515 0 .772-.01.147.038.246.088.294l.814.806c.475.469.679 1.216.364 1.891a7.977 7.977 0 0 1-.704 1.217c-.428.61-1.176.807-1.82.63l-1.102-.302c-.067-.019-.177-.011-.3.071a5.909 5.909 0 0 1-.668.386c-.133.066-.194.158-.211.224l-.29 1.106c-.168.646-.715 1.196-1.458 1.26a8.006 8.006 0 0 1-1.402 0c-.743-.064-1.289-.614-1.458-1.26l-.289-1.106c-.018-.066-.079-.158-.212-.224a5.738 5.738 0 0 1-.668-.386c-.123-.082-.233-.09-.299-.071l-1.103.303c-.644.176-1.392-.021-1.82-.63a8.12 8.12 0 0 1-.704-1.218c-.315-.675-.111-1.422.363-1.891l.815-.806c.05-.048.098-.147.088-.294a6.214 6.214 0 0 1 0-.772c.01-.147-.038-.246-.088-.294l-.815-.806C.635 6.045.431 5.298.746 4.623a7.92 7.92 0 0 1 .704-1.217c.428-.61 1.176-.807 1.82-.63l1.102.302c.067.019.177.011.3-.071.214-.143.437-.272.668-.386.133-.066.194-.158.211-.224l.29-1.106C6.009.645 6.556.095 7.299.03 7.53.01 7.764 0 8 0Zm-.571 1.525c-.036.003-.108.036-.137.146l-.289 1.105c-.147.561-.549.967-.998 1.189-.173.086-.34.183-.5.29-.417.278-.97.423-1.529.27l-1.103-.303c-.109-.03-.175.016-.195.045-.22.312-.412.644-.573.99-.014.031-.021.11.059.19l.815.806c.411.406.562.957.53 1.456a4.709 4.709 0 0 0 0 .582c.032.499-.119 1.05-.53 1.456l-.815.806c-.081.08-.073.159-.059.19.162.346.353.677.573.989.02.03.085.076.195.046l1.102-.303c.56-.153 1.113-.008 1.53.27.161.107.328.204.501.29.447.222.85.629.997 1.189l.289 1.105c.029.109.101.143.137.146a6.6 6.6 0 0 0 1.142 0c.036-.003.108-.036.137-.146l.289-1.105c.147-.561.549-.967.998-1.189.173-.086.34-.183.5-.29.417-.278.97-.423 1.529-.27l1.103.303c.109.029.175-.016.195-.045.22-.313.411-.644.573-.99.014-.031.021-.11-.059-.19l-.815-.806c-.411-.406-.562-.957-.53-1.456a4.709 4.709 0 0 0 0-.582c-.032-.499.119-1.05.53-1.456l.815-.806c.081-.08.073-.159.059-.19a6.464 6.464 0 0 0-.573-.989c-.02-.03-.085-.076-.195-.046l-1.102.303c-.56.153-1.113.008-1.53-.27a4.44 4.44 0 0 0-.501-.29c-.447-.222-.85-.629-.997-1.189l-.289-1.105c-.029-.11-.101-.143-.137-.146a6.6 6.6 0 0 0-1.142 0ZM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM9.5 8a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 9.5 8Z"></path>
+</svg>
+        </span>
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          General
+</span></a>
+  
+  
+</li>
+
+          <li role="presentation" aria-hidden="true" data-view-component="true" class="ActionList-sectionDivider"></li>
+        <li data-view-component="true">
+          <nav-list-group>
+
+<div data-view-component="true">
+    <div data-view-component="true" class="ActionList-sectionDivider">
+  <h2 id="heading-title-cfa7602a-b9a0-40b6-a2ec-c21e7bb88676" data-view-component="true" class="ActionList-sectionDivider-title">
+    Access
+</h2>  
+</div>
+  <ul id="group-27f49339-cf85-411e-9126-7c6cd5f90fc5" role="list" aria-labelledby="heading-title-cfa7602a-b9a0-40b6-a2ec-c21e7bb88676" data-view-component="true" class="ActionListWrap">
+      
+<li data-targets="nav-list.items nav-list.items" data-item-id="collaborators" data-view-component="true" class="ActionListItem">
+    
+    <a id="item-037bdf44-0177-4e4c-877a-23cc09b28c90" href="/pwqpol/dotfiles/settings/access" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+        <span class="ActionListItem-visual ActionListItem-visual--leading">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-people">
+    <path d="M2 5.5a3.5 3.5 0 1 1 5.898 2.549 5.508 5.508 0 0 1 3.034 4.084.75.75 0 1 1-1.482.235 4 4 0 0 0-7.9 0 .75.75 0 0 1-1.482-.236A5.507 5.507 0 0 1 3.102 8.05 3.493 3.493 0 0 1 2 5.5ZM11 4a3.001 3.001 0 0 1 2.22 5.018 5.01 5.01 0 0 1 2.56 3.012.749.749 0 0 1-.885.954.752.752 0 0 1-.549-.514 3.507 3.507 0 0 0-2.522-2.372.75.75 0 0 1-.574-.73v-.352a.75.75 0 0 1 .416-.672A1.5 1.5 0 0 0 11 5.5.75.75 0 0 1 11 4Zm-5.5-.5a2 2 0 1 0-.001 3.999A2 2 0 0 0 5.5 3.5Z"></path>
+</svg>
+        </span>
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Collaborators
+</span></a>
+  
+  
+</li>
+
+      
+<li submenu_classes="repo-sub-menu" data-targets="nav-list.items nav-list.items" data-item-id="" data-view-component="true" class="ActionListItem ActionListItem--hasSubItem">
+    
+    <button id="item-0d99e076-fe78-4426-9b48-d8f44891376e" type="button" aria-expanded="false" data-action="
+            click:nav-list#handleItemWithSubItemClick
+            keydown:nav-list#handleItemWithSubItemKeydown
+          " data-view-component="true" class="ActionListContent ActionListContent--visual16">
+        <span class="ActionListItem-visual ActionListItem-visual--leading">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-comment-discussion">
+    <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.061l-2.574 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.458 1.458 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h1a.25.25 0 0 0 .25-.25Z"></path>
+</svg>
+        </span>
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Moderation options
+</span>        <span class="ActionListItem-visual ActionListItem-action--trailing">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-down ActionListItem-collapseIcon">
+    <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+</svg>
+        </span>
+</button>
+  
+        <ul role="list" data-action="keydown:nav-list#handleItemWithSubItemKeydown" aria-labelledby="item-0d99e076-fe78-4426-9b48-d8f44891376e" data-view-component="true" class="ActionList ActionList--subGroup">
+          
+<li data-targets="nav-list.items nav-list.items" data-item-id="interaction_limits" data-view-component="true" class="ActionListItem--subItem ActionListItem">
+    
+    <a id="item-a0f53d97-2fdd-4a23-93f6-75b768c6999c" href="/pwqpol/dotfiles/settings/interaction_limits" data-view-component="true" class="ActionListContent">
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Interaction limits
+</span></a>
+  
+  
+</li>
+
+          
+<li data-targets="nav-list.items nav-list.items" data-item-id="code_review_limits" data-view-component="true" class="ActionListItem--subItem ActionListItem">
+    
+    <a id="item-03ef4f54-8ace-48e6-a86b-ea87ce2744c8" href="/pwqpol/dotfiles/settings/code_review_limits" data-view-component="true" class="ActionListContent">
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Code review limits
+</span></a>
+  
+  
+</li>
+
+</ul>
+</li>
+
+</ul>  
+</div></nav-list-group>
+
+</li>          <li role="presentation" aria-hidden="true" data-view-component="true" class="ActionList-sectionDivider"></li>
+        <li data-view-component="true">
+          <nav-list-group>
+
+<div data-view-component="true">
+    <div data-view-component="true" class="ActionList-sectionDivider">
+  <h2 id="heading-title-6d3a34e1-c8f6-492c-9e40-35e3ee4d9393" data-view-component="true" class="ActionList-sectionDivider-title">
+    Code and automation
+</h2>  
+</div>
+  <ul id="group-e1422d1f-9d57-4ae7-be8d-cbbc65862f85" role="list" aria-labelledby="heading-title-6d3a34e1-c8f6-492c-9e40-35e3ee4d9393" data-view-component="true" class="ActionListWrap">
+      
+<li data-targets="nav-list.items nav-list.items" data-item-id="" data-view-component="true" class="ActionListItem ActionListItem--hasSubItem">
+    
+    <button id="repo_rules" type="button" aria-expanded="false" data-action="
+            click:nav-list#handleItemWithSubItemClick
+            keydown:nav-list#handleItemWithSubItemKeydown
+          " data-view-component="true" class="ActionListContent ActionListContent--visual16">
+        <span class="ActionListItem-visual ActionListItem-visual--leading">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-push">
+    <path d="M1 2.5A2.5 2.5 0 0 1 3.5 0h8.75a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0V1.5h-8a1 1 0 0 0-1 1v6.708A2.493 2.493 0 0 1 3.5 9h3.25a.75.75 0 0 1 0 1.5H3.5a1 1 0 0 0 0 2h5.75a.75.75 0 0 1 0 1.5H3.5A2.5 2.5 0 0 1 1 11.5Zm13.23 7.79h-.001l-1.224-1.224v6.184a.75.75 0 0 1-1.5 0V9.066L10.28 10.29a.75.75 0 0 1-1.06-1.061l2.505-2.504a.75.75 0 0 1 1.06 0L15.29 9.23a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018Z"></path>
+</svg>
+        </span>
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Rules
+</span>        <span class="ActionListItem-visual ActionListItem-action--trailing">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-down ActionListItem-collapseIcon">
+    <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+</svg>
+        </span>
+</button>
+  
+        <ul role="list" data-action="keydown:nav-list#handleItemWithSubItemKeydown" aria-labelledby="repo_rules" data-view-component="true" class="ActionList ActionList--subGroup">
+          
+<li data-targets="nav-list.items nav-list.items" data-item-id="repo_rulesets" data-view-component="true" class="ActionListItem--subItem ActionListItem">
+    
+    <a id="item-0a472bb5-0ec0-47d4-84a3-7dc19bc3aaba" href="/pwqpol/dotfiles/settings/rules" data-view-component="true" class="ActionListContent">
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Rulesets
+</span></a>
+  
+  
+</li>
+
+</ul>
+</li>
+
+      
+<li data-targets="nav-list.items nav-list.items" data-item-id="" data-view-component="true" class="ActionListItem ActionListItem--hasSubItem">
+    
+    <button id="item-e6a366f9-4c20-4451-88c3-7607b36ddcb1" type="button" aria-expanded="false" data-action="
+            click:nav-list#handleItemWithSubItemClick
+            keydown:nav-list#handleItemWithSubItemKeydown
+          " data-view-component="true" class="ActionListContent ActionListContent--visual16">
+        <span class="ActionListItem-visual ActionListItem-visual--leading">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-play">
+    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm4.879-2.773 4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.559V5.442a.25.25 0 0 1 .379-.215Z"></path>
+</svg>
+        </span>
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Actions
+</span>        <span class="ActionListItem-visual ActionListItem-action--trailing">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-down ActionListItem-collapseIcon">
+    <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+</svg>
+        </span>
+</button>
+  
+        <ul role="list" data-action="keydown:nav-list#handleItemWithSubItemKeydown" aria-labelledby="item-e6a366f9-4c20-4451-88c3-7607b36ddcb1" data-view-component="true" class="ActionList ActionList--subGroup">
+          
+<li data-targets="nav-list.items nav-list.items" data-item-id="repository_actions_settings_general" data-view-component="true" class="ActionListItem--subItem ActionListItem">
+    
+    <a id="item-97808885-64a0-46a7-b6da-43f27dac4ae3" href="/pwqpol/dotfiles/settings/actions" data-view-component="true" class="ActionListContent">
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          General
+</span></a>
+  
+  
+</li>
+
+          
+<li data-targets="nav-list.items nav-list.items" data-item-id="repository_actions_settings_runners" data-view-component="true" class="ActionListItem--subItem ActionListItem">
+    
+    <a id="item-4650ffae-2a74-448f-8273-4ee8fdbc42db" href="/pwqpol/dotfiles/settings/actions/runners" data-view-component="true" class="ActionListContent">
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Runners
+</span></a>
+  
+  
+</li>
+
+</ul>
+</li>
+
+      
+<li data-targets="nav-list.items nav-list.items" data-item-id="hooks" data-view-component="true" class="ActionListItem">
+    
+    <a id="item-2173a0a4-a637-4456-8314-13439f5c49f8" href="/pwqpol/dotfiles/settings/hooks" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+        <span class="ActionListItem-visual ActionListItem-visual--leading">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-webhook">
+    <path d="M5.5 4.25a2.25 2.25 0 0 1 4.5 0 .75.75 0 0 0 1.5 0 3.75 3.75 0 1 0-6.14 2.889l-2.272 4.258a.75.75 0 0 0 1.324.706L7 7.25a.75.75 0 0 0-.309-1.015A2.25 2.25 0 0 1 5.5 4.25Z"></path><path d="M7.364 3.607a.75.75 0 0 1 1.03.257l2.608 4.349a3.75 3.75 0 1 1-.628 6.785.75.75 0 0 1 .752-1.299 2.25 2.25 0 1 0-.033-3.88.75.75 0 0 1-1.03-.256L7.107 4.636a.75.75 0 0 1 .257-1.03Z"></path><path d="M2.9 8.776A.75.75 0 0 1 2.625 9.8 2.25 2.25 0 1 0 6 11.75a.75.75 0 0 1 .75-.751h5.5a.75.75 0 0 1 0 1.5H7.425a3.751 3.751 0 1 1-5.55-3.998.75.75 0 0 1 1.024.274Z"></path>
+</svg>
+        </span>
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Webhooks
+</span></a>
+  
+  
+</li>
+
+      
+<li data-targets="nav-list.items nav-list.items" data-item-id="repository_environments" data-view-component="true" class="ActionListItem">
+    
+    <a id="item-15e8c941-2cd4-4212-a4f5-5687ee215e3d" href="/pwqpol/dotfiles/settings/environments" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+        <span class="ActionListItem-visual ActionListItem-visual--leading">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-server">
+    <path d="M1.75 1h12.5c.966 0 1.75.784 1.75 1.75v4c0 .372-.116.717-.314 1 .198.283.314.628.314 1v4a1.75 1.75 0 0 1-1.75 1.75H1.75A1.75 1.75 0 0 1 0 12.75v-4c0-.358.109-.707.314-1a1.739 1.739 0 0 1-.314-1v-4C0 1.784.784 1 1.75 1ZM1.5 2.75v4c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25Zm.25 5.75a.25.25 0 0 0-.25.25v4c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-4a.25.25 0 0 0-.25-.25ZM7 4.75A.75.75 0 0 1 7.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 7 4.75ZM7.75 10h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM3 4.75A.75.75 0 0 1 3.75 4h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 4.75ZM3.75 10h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5Z"></path>
+</svg>
+        </span>
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Environments
+</span></a>
+  
+  
+</li>
+
+      
+<li data-targets="nav-list.items nav-list.items" data-item-id="codespaces_repository_settings" data-view-component="true" class="ActionListItem">
+    
+    <a id="item-f59af785-f45d-4a9e-b2ea-1bf874faba3e" href="/pwqpol/dotfiles/settings/codespaces" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+        <span class="ActionListItem-visual ActionListItem-visual--leading">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-codespaces">
+    <path d="M0 11.25c0-.966.784-1.75 1.75-1.75h12.5c.966 0 1.75.784 1.75 1.75v3A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25Zm2-9.5C2 .784 2.784 0 3.75 0h8.5C13.216 0 14 .784 14 1.75v5a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 2 6.75Zm1.75-.25a.25.25 0 0 0-.25.25v5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5a.25.25 0 0 0-.25-.25Zm-2 9.5a.25.25 0 0 0-.25.25v3c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-3a.25.25 0 0 0-.25-.25Z"></path><path d="M7 12.75a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Zm-4 0a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75Z"></path>
+</svg>
+        </span>
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Codespaces
+</span></a>
+  
+  
+</li>
+
+      
+<li data-targets="nav-list.items nav-list.items" data-item-id="repo_pages_settings" data-view-component="true" class="ActionListItem">
+    
+    <a id="item-e7d8d0ec-9a51-467c-a22b-60c173b922ae" href="/pwqpol/dotfiles/settings/pages" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+        <span class="ActionListItem-visual ActionListItem-visual--leading">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-browser">
+    <path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25ZM14.5 6h-13v7.25c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Zm-6-3.5v2h6V2.75a.25.25 0 0 0-.25-.25ZM5 2.5v2h2v-2Zm-3.25 0a.25.25 0 0 0-.25.25V4.5h2v-2Z"></path>
+</svg>
+        </span>
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Pages
+</span></a>
+  
+  
+</li>
+
+</ul>  
+</div></nav-list-group>
+
+</li>          <li role="presentation" aria-hidden="true" data-view-component="true" class="ActionList-sectionDivider"></li>
+        <li data-view-component="true">
+          <nav-list-group>
+
+<div data-view-component="true">
+    <div data-view-component="true" class="ActionList-sectionDivider">
+  <h2 id="heading-title-a05f2646-0df0-4fa4-84cb-60143b426b02" data-view-component="true" class="ActionList-sectionDivider-title">
+    Security
+</h2>  
+</div>
+  <ul id="group-70e69c9d-8fa1-49ea-ba02-ac77a9da1315" role="list" aria-labelledby="heading-title-a05f2646-0df0-4fa4-84cb-60143b426b02" data-view-component="true" class="ActionListWrap">
+      
+<li data-targets="nav-list.items nav-list.items" data-item-id="security_analysis" data-view-component="true" class="ActionListItem">
+    
+    <a id="item-047f7ed2-3040-471a-9d35-466c47468149" href="/pwqpol/dotfiles/settings/security_analysis" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+        <span class="ActionListItem-visual ActionListItem-visual--leading">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-codescan">
+    <path d="M8.47 4.97a.75.75 0 0 0 0 1.06L9.94 7.5 8.47 8.97a.75.75 0 1 0 1.06 1.06l2-2a.75.75 0 0 0 0-1.06l-2-2a.75.75 0 0 0-1.06 0ZM6.53 6.03a.75.75 0 0 0-1.06-1.06l-2 2a.75.75 0 0 0 0 1.06l2 2a.75.75 0 1 0 1.06-1.06L5.06 7.5l1.47-1.47Z"></path><path d="M12.246 13.307a7.501 7.501 0 1 1 1.06-1.06l2.474 2.473a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM1.5 7.5a6.002 6.002 0 0 0 3.608 5.504 6.002 6.002 0 0 0 6.486-1.117.748.748 0 0 1 .292-.293A6 6 0 1 0 1.5 7.5Z"></path>
+</svg>
+        </span>
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Code security and analysis
+</span></a>
+  
+  
+</li>
+
+      
+<li data-targets="nav-list.items nav-list.items" data-item-id="repo_keys_settings" data-view-component="true" class="ActionListItem">
+    
+    <a id="item-70286917-fc61-4ce4-a647-d0893a78f7cf" href="/pwqpol/dotfiles/settings/keys" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+        <span class="ActionListItem-visual ActionListItem-visual--leading">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-key">
+    <path d="M10.5 0a5.499 5.499 0 1 1-1.288 10.848l-.932.932a.749.749 0 0 1-.53.22H7v.75a.749.749 0 0 1-.22.53l-.5.5a.749.749 0 0 1-.53.22H5v.75a.749.749 0 0 1-.22.53l-.5.5a.749.749 0 0 1-.53.22h-2A1.75 1.75 0 0 1 0 14.25v-2c0-.199.079-.389.22-.53l4.932-4.932A5.5 5.5 0 0 1 10.5 0Zm-4 5.5c-.001.431.069.86.205 1.269a.75.75 0 0 1-.181.768L1.5 12.56v1.69c0 .138.112.25.25.25h1.69l.06-.06v-1.19a.75.75 0 0 1 .75-.75h1.19l.06-.06v-1.19a.75.75 0 0 1 .75-.75h1.19l1.023-1.025a.75.75 0 0 1 .768-.18A4 4 0 1 0 6.5 5.5ZM11 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path>
+</svg>
+        </span>
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Deploy keys
+</span></a>
+  
+  
+</li>
+
+          
+<li data-targets="nav-list.items nav-list.items" data-item-id="" data-view-component="true" class="ActionListItem ActionListItem--hasSubItem">
+    
+    <button id="item-c21e04b5-101c-4508-b2e8-5803bb343146" type="button" aria-expanded="false" data-action="
+            click:nav-list#handleItemWithSubItemClick
+            keydown:nav-list#handleItemWithSubItemKeydown
+          " data-view-component="true" class="ActionListContent ActionListContent--visual16">
+        <span class="ActionListItem-visual ActionListItem-visual--leading">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-key-asterisk">
+    <path d="M0 2.75A2.75 2.75 0 0 1 2.75 0h10.5A2.75 2.75 0 0 1 16 2.75v10.5A2.75 2.75 0 0 1 13.25 16H2.75A2.75 2.75 0 0 1 0 13.25ZM2.75 1.5c-.69 0-1.25.56-1.25 1.25v10.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25V2.75c0-.69-.56-1.25-1.25-1.25Z"></path><path d="M8 4a.75.75 0 0 1 .75.75V6.7l1.69-.975a.75.75 0 0 1 .75 1.3L9.5 8l1.69.976a.75.75 0 0 1-.75 1.298L8.75 9.3v1.951a.75.75 0 0 1-1.5 0V9.299l-1.69.976a.75.75 0 0 1-.75-1.3L6.5 8l-1.69-.975a.75.75 0 0 1 .75-1.3l1.69.976V4.75A.75.75 0 0 1 8 4Z"></path>
+</svg>
+        </span>
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Secrets and variables
+</span>        <span class="ActionListItem-visual ActionListItem-action--trailing">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-down ActionListItem-collapseIcon">
+    <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+</svg>
+        </span>
+</button>
+  
+        <ul role="list" data-action="keydown:nav-list#handleItemWithSubItemKeydown" aria-labelledby="item-c21e04b5-101c-4508-b2e8-5803bb343146" data-view-component="true" class="ActionList ActionList--subGroup">
+          
+<li data-targets="nav-list.items nav-list.items" data-item-id="secrets_settings_actions" data-view-component="true" class="ActionListItem--subItem ActionListItem">
+    
+    <a id="item-e517d86e-c466-4c1d-bb9e-50bbe94327f5" href="/pwqpol/dotfiles/settings/secrets/actions" data-view-component="true" class="ActionListContent">
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Actions
+</span></a>
+  
+  
+</li>
+
+          
+<li data-targets="nav-list.items nav-list.items" data-item-id="secrets_settings_codespaces" data-view-component="true" class="ActionListItem--subItem ActionListItem">
+    
+    <a id="item-1776ddee-a414-4cf5-8657-94a56e17fc4b" href="/pwqpol/dotfiles/settings/secrets/codespaces" data-view-component="true" class="ActionListContent">
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Codespaces
+</span></a>
+  
+  
+</li>
+
+          
+<li data-targets="nav-list.items nav-list.items" data-item-id="secrets_settings_dependabot" data-view-component="true" class="ActionListItem--subItem ActionListItem">
+    
+    <a id="item-e1ae595b-277a-4b94-9808-7b7a2c3c8678" href="/pwqpol/dotfiles/settings/secrets/dependabot" data-view-component="true" class="ActionListContent">
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Dependabot
+</span></a>
+  
+  
+</li>
+
+</ul>
+</li>
+
+</ul>  
+</div></nav-list-group>
+
+</li>          <li role="presentation" aria-hidden="true" data-view-component="true" class="ActionList-sectionDivider"></li>
+        <li data-view-component="true">
+          <nav-list-group>
+
+<div data-view-component="true">
+    <div data-view-component="true" class="ActionList-sectionDivider">
+  <h2 id="heading-title-6064bb1a-3aa4-4694-8f9d-23ec65bb3276" data-view-component="true" class="ActionList-sectionDivider-title">
+    Integrations
+</h2>  
+</div>
+  <ul id="group-155491d4-dc49-47e6-86ff-bfadc3ddc65b" role="list" aria-labelledby="heading-title-6064bb1a-3aa4-4694-8f9d-23ec65bb3276" data-view-component="true" class="ActionListWrap">
+      
+<li data-targets="nav-list.items nav-list.items" data-item-id="integration_installations" data-view-component="true" class="ActionListItem">
+    
+    <a id="item-2008f833-80ac-41f6-beea-477ab41dd89e" href="/pwqpol/dotfiles/settings/installations" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+        <span class="ActionListItem-visual ActionListItem-visual--leading">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-hubot">
+    <path d="M0 8a8 8 0 0 1 16 0v5.25a.75.75 0 0 1-1.5 0V8a6.5 6.5 0 1 0-13 0v5.25a.75.75 0 0 1-1.5 0Zm3-1.25C3 5.784 3.784 5 4.75 5h6.5c.966 0 1.75.784 1.75 1.75v1.5A1.75 1.75 0 0 1 11.25 10h-6.5A1.75 1.75 0 0 1 3 8.25Zm1.47-.53a.75.75 0 0 0 0 1.06l1.5 1.5a.75.75 0 0 0 1.06 0L8 7.81l.97.97a.75.75 0 0 0 1.06 0l1.5-1.5a.749.749 0 0 0-.326-1.275.749.749 0 0 0-.734.215l-.97.97-.97-.97a.75.75 0 0 0-1.06 0l-.97.97-.97-.97a.75.75 0 0 0-1.06 0Zm1.03 6.03a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1-.75-.75Z"></path>
+</svg>
+        </span>
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          GitHub Apps
+</span></a>
+  
+  
+</li>
+
+      
+<li data-targets="nav-list.items nav-list.items" data-item-id="notifications" data-view-component="true" class="ActionListItem">
+    
+    <a id="item-b8ae810b-c68c-485d-a8a0-e9a2c2464705" href="/pwqpol/dotfiles/settings/notifications" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+        <span class="ActionListItem-visual ActionListItem-visual--leading">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-mail">
+    <path d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z"></path>
+</svg>
+        </span>
+      
+        <span data-view-component="true" class="ActionListItem-label">
+          Email notifications
+</span></a>
+  
+  
+</li>
+
+</ul>  
+</div></nav-list-group>
+
+</li></ul>  </nav-list>
+</nav></div>
+
+</div>
+  <div data-view-component="true" class="Layout-main"><div data-view-component="true" class="Layout-main-centered-md"><div data-view-component="true" class="container-md">        
+  <div id="options_bucket">
+    <div data-view-component="true" class="Subhead">
+  <h2 data-view-component="true" class="Subhead-heading Subhead-heading--large">General</h2>
+  
+  
+</div>      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="d-flex" data-turbo="false" action="/pwqpol/dotfiles/settings/rename" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="6Ml_gcwUM4E62mN1byvO1736WKzCJdF6VwlcumPdHKdoJTs7-35GGACrXtQWAWrGKVNvlsMlCzOUFr2lh6am3Q" />
+  <auto-check required src="/repositories/check-name?current_name=dotfiles&amp;owner=pwqpol">
+    <dl class="form-group d-inline-block my-0">
+      <dt class="input-label">
+        <label for="rename-field">Repository name</label>
+      </dt>
+      <dd>
+        <input
+          type="text"
+          name="new_name"
+          value="dotfiles"
+          class="form-control js-repo-name short js-with-permission-fields"
+          id="rename-field"
+          maxlength="100"
+          autocapitalize="off"
+          required>
+      </dd>
+    </dl>
+    <input type="hidden" value="KOKGivNaD6Ozt4_pWpZHZncnPGGp1lH5skzGP0Esv4iJFWhY0LXklTNTmh_6UmaTME1TTAyj1mqodp6qe7oyEQ" data-csrf="true" />
+  </auto-check>
+  <input type="text" name="required_field_ae11" hidden="hidden" class="form-control" /><input type="hidden" name="timestamp" value="1703925849050" autocomplete="off" class="form-control" /><input type="hidden" name="timestamp_secret" value="20767f650244b29325ff0ba53941fe7c8282e4b68db7564995205be96aa044d5" autocomplete="off" class="form-control" />
+    <button data-disable-invalid="" type="submit" data-view-component="true" class="flex-self-end btn">    Rename
+</button>
+</form>
+      
+<!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-repo-features-form" data-autosubmit="true" data-turbo="false" action="/pwqpol/dotfiles/settings/update" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" autocomplete="off" /><input type="hidden" name="authenticity_token" value="1cJHVWlPcQACE-FUJiXWXDe82bGWnT-hywxuDMtOOyXsfrnPDpdWfnU49n9DHAMD9fqXbKlsDWXwhl-Fdv1gAA" />
+  <div class="form-checkbox js-repo-option">
+    <input type="hidden" name="template" value="0">
+    <input type="checkbox" name="template" value="1" aria-describedby="template-feature-desc" id="template-feature" >
+    <label for="template-feature">Template repository</label>
+    <span class="hx_status-indicator status-indicator ml-1 js-status-indicator">
+      <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="status-indicator-spinner anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+    </span>
+      <p id="template-feature-desc" class="note">
+        Template repositories let users generate new repositories with the same directory structure and files.
+        <a class="Link--inTextBlock" href="https://docs.github.com/articles/creating-a-repository-from-a-template/">Learn more about template repositories</a>.
+      </p>
+  </div>
+  <noscript>
+      <button type="submit" data-view-component="true" class="btn-primary btn">    Save changes
+</button>
+  </noscript>
+</form>
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-repo-features-form" data-autosubmit="true" data-turbo="false" action="/pwqpol/dotfiles/settings/update_dco_settings" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" autocomplete="off" /><input type="hidden" name="authenticity_token" value="Zvg-8zyauLM8XSTXd0OgEK7NynDzaqJZFE2QRwSK39pNXzpqoJaBVQyO0QoSiQHyO7r4kfjtjjMG4aCvCQ1OrA" autocomplete="off" />
+  <div class="form-checkbox js-repo-option">
+    <input type="hidden" name="enable_dco_signoff" value="0">
+    <input type="checkbox"
+          name="enable_dco_signoff"
+          aria-describedby="enable_dco_signoff_desc"
+          id="enable_dco_signoff_checkbox"
+          value="1"
+          
+          >
+    <label for="enable_dco_signoff_checkbox">Require contributors to sign off on web-based commits</label>
+    <span class="hx_status-indicator status-indicator v-align-top ml-1 js-status-indicator">
+      <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="status-indicator-spinner anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+    </span>
+    <p id="enable_dco_signoff_desc" class="note">
+      Enabling this setting will require contributors to sign off on commits made through GitHub’s web interface. Signing off is a way for contributors to affirm that their commit complies with the repository's terms, commonly the <a target="_blank" class="Link--inTextBlock" href="https://developercertificate.org">Developer Certificate of Origin (DCO)</a>. <a target="_blank" class="Link--inTextBlock" href="https://docs.github.com/en/organizations/managing-organization-settings/managing-the-commit-signoff-policy-for-your-organization">Learn more about signing off on commits</a>.
+    </p>
+  </div>
+</form>
+      
+
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" data-turbo="false" action="/pwqpol/dotfiles/settings/open-graph-image" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" autocomplete="off" /><input type="hidden" name="authenticity_token" value="eVIIjZYRNV53W9ptb0UyauA88YyX-V-l7XEYHmEA1BA7ygXDfVIH17PCiRnJkc3-RoOPzjRPmOt6ZreuqBy7cg" />
+  <file-attachment input="repo-image-file-input" class="js-upload-repository-image is-default" data-upload-repository-id="737223341" novalidate="novalidate" data-upload-policy-url="/upload/policies/repository-images"><input type="hidden" value="-ch05AViM-8140eM-ruZBLnQkgajgPJ1ApZmWQU6FNup1_MMCrD3K3jHhT3qGIFXbEpsztX4cvN_tlzses_EtQ" data-csrf="true" class="js-data-upload-policy-url-csrf" />
+    <input type="file" id="repo-image-file-input" style="display: none">
+    <div class="form-group d-block mb-0 mt-6">
+      <div data-view-component="true" class="Subhead Subhead--spacious">
+  <h2 data-view-component="true" class="Subhead-heading Subhead-heading--large">Social preview</h2>
+  
+  
+</div>      <div class="avatar-upload-container">
+        <p>
+          Upload an image to customize your repository&rsquo;s social media preview.
+        </p>
+        <p>
+          Images should be at least 640&times;320px (1280&times;640px for best display).<br>
+          <a href="/pwqpol/dotfiles/settings/og-template" class="text-bold">Download template</a>
+        </p>
+        <div class="avatar-upload position-relative">
+          <div class="upload-state pt-0 loading position-absolute width-full text-center">
+            <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="v-align-text-bottom anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg> Uploading...
+          </div>
+          <div class="upload-state pt-0 color-fg-danger file-empty">
+            This file is empty.
+          </div>
+
+          <div class="upload-state pt-0 color-fg-danger too-big">
+            Please upload a picture smaller than 1 MB.
+          </div>
+
+          <div class="upload-state pt-0 color-fg-danger bad-dimensions">
+            Please upload a picture smaller than 10,000x10,000.
+          </div>
+
+          <div class="upload-state pt-0 color-fg-danger bad-file">
+            We only support PNG, GIF, or JPG pictures.
+          </div>
+
+          <div class="upload-state pt-0 color-fg-danger failed-request">
+            Something went really wrong and we can&rsquo;t process that picture.
+          </div>
+
+          <div class="upload-state pt-0 color-fg-danger bad-format">
+            File contents don&rsquo;t match the file extension.
+          </div>
+        </div>
+      </div>
+    </div>
+</file-attachment></form>
+<div class="avatar-upload position-relative">
+  <details class="dropdown details-reset details-overlay">
+    <summary>
+        <div hidden class="border rounded-2 repository-og-image js-repository-image-container"></div>
+        <div id="edit-social-preview-button" class="color-bg-default rounded-2 color-fg-default px-2 py-1 left-0 bottom-0 mb-2 border" style="width: fit-content">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-pencil">
+    <path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path>
+</svg> Edit
+        </div>
+    </summary>
+    <details-menu class="dropdown-menu dropdown-menu-se" style="z-index: 99">
+      <label for="repo-image-file-input" class="dropdown-item btn-link text-normal" role="menuitem" tabindex="0">
+        Upload an image&hellip;
+      </label>
+
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-turbo="false" action="/pwqpol/dotfiles/settings/open-graph-image" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="delete" autocomplete="off" /><input type="hidden" name="authenticity_token" value="hI0KXWdBGY_VYVyCg853bmCae_djis_HPCcX78gA_1EON-iaRr0lSr0f-JkYziJ4OTJJl1Ac6RVrYI7cHX4vwg" />
+        <input type="hidden" name="id" class="js-repository-image-id" value="">
+        <button class="dropdown-item btn-link js-remove-repository-image-button" role="menuitem" type="submit" data-disable-with data-confirm="Are you sure you want to remove pwqpol/dotfiles's promotional image?" hidden>
+          Remove image
+        </button>
+</form>    </details-menu>
+  </details>
+</div>
+
+
+
+      <div data-view-component="true" class="Subhead Subhead--spacious border-bottom-0 mb-0">
+  <h2 id="features" data-view-component="true" class="Subhead-heading Subhead-heading--large">Features</h2>
+  
+  
+</div>      
+<div class="Box">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-repo-features-form" data-autosubmit="true" data-turbo="false" action="/pwqpol/dotfiles/settings/update" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" autocomplete="off" /><input type="hidden" name="authenticity_token" value="vVN_8JkfMsBvoGAF_b6pLw52qtsBgMQ2WnqF9Z7UBeGE74Fq_scVvhiLdy6Yh3xwzDDkBj5x9vJh8LR8I2dexA" />
+    <div class="Box-row py-0">
+        <div role="group" aria-label="Wikis" class="form-checkbox js-repo-option js-toggler-container wikis-options on" >
+          <input type="hidden" name="has_wiki" value="0">
+          <input
+            type="checkbox"
+            name="has_wiki"
+            value="1"
+            class="js-toggler-target"
+            aria-describedby="wiki-feature-desc"
+            id="wiki-feature" checked
+            
+          >
+          <label for="wiki-feature">Wikis</label>
+          <span class="hx_status-indicator status-indicator ml-1 js-status-indicator">
+            <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="status-indicator-spinner anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg>
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+          </span>
+          <p id="wiki-feature-desc" class="note">
+            Wikis host documentation for your repository.
+          </p>
+
+            <div class="form-checkbox js-repo-option wikis-restrict-editing">
+              <input type="hidden" name="wiki_access_to_pushers" value="0">
+              <input type="checkbox" name="wiki_access_to_pushers" value="1" aria-describedby="wiki-pusher-access-desc" id="wiki-pusher-access" checked>
+                <label for="wiki-pusher-access">Restrict editing to collaborators only</label>
+              <span class="hx_status-indicator status-indicator ml-1 js-status-indicator">
+                <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="status-indicator-spinner anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg>
+                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+              </span>
+                <p id="wiki-pusher-access-desc" class="note">Public wikis will still be readable by everyone.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="Box-row py-0">
+      <div class="form-checkbox js-repo-option">
+        <input type="hidden" name="has_issues" value="0">
+        <input type="checkbox" name="has_issues" value="1" aria-describedby="issues-desc" id="issue-feature" checked>
+        <label for="issue-feature">Issues</label>
+        <span class="hx_status-indicator status-indicator ml-1 js-status-indicator">
+          <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="status-indicator-spinner anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg>
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+        </span>
+        <p id="issues-desc" class="note">
+          Issues integrate lightweight task tracking into your repository.
+          Keep projects on track with issue labels and milestones, and reference them in commit messages.
+        </p>
+
+          <div data-view-component="true" class="flash my-3">
+  
+            <div class="d-flex flex-md-row flex-column flex-md-items-center flex-items-start">
+              <div class="mb-md-0 mb-3">
+                <h3 class="h5 mb-2">Get organized with issue templates</h3>
+                <p class="pr-6 mb-0">Give contributors issue templates that help you cut through the noise and help them push your project forward.</p>
+              </div>
+              <div>
+                <a href="/pwqpol/dotfiles/issues/templates/edit" class="btn btn-primary">
+                  Set up templates
+                </a>
+              </div>
+            </div>
+
+
+  
+</div>      </div>
+    </div>
+
+
+
+      <div class="Box-row py-0" >
+        <div class="form-checkbox js-repo-option">
+          <input type="hidden" name="archive_program_opt_out_enabled" value="1">
+          <input type="checkbox" name="archive_program_opt_out_enabled" value="0"
+            aria-describedby="archive-program-opt-out-feature-desc"
+            id="archive-program-opt-out-feature"
+            
+            checked>
+          <label for="archive-program-opt-out-feature">
+            Preserve this repository
+          </label>
+          <span class="hx_status-indicator status-indicator ml-1 js-status-indicator">
+            <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="status-indicator-spinner anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg>
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+          </span>
+          <p id="archive-program-opt-out-feature-desc" class="note color-fg-muted">
+            Include this code in the <a class="Link--inTextBlock" href="https://archiveprogram.github.com/faq/">GitHub Archive Program</a>.
+          </p>
+        </div>
+      </div>
+
+    <noscript>
+        <button type="submit" data-view-component="true" class="btn-primary btn">    Save changes
+</button>
+    </noscript>
+</form>
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="border-top js-repo-features-form" data-autosubmit="true" data-turbo="false" action="/pwqpol/dotfiles/settings/discussion_activation" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" autocomplete="off" /><input type="hidden" name="authenticity_token" value="1SvewHIKZfa_LUBAGlPC5W5VXHql1Pw6hSD1AO--jSNmeyzs9b_dLNw5P8s5iukPmWK0-qkz-U8-tWIY_88VwQ" />
+      <div class="Box-row py-0">
+        <div class="form-checkbox js-repo-option">
+          <input type="hidden" name="has_discussions" value="0">
+          <input
+            type="checkbox"
+            name="has_discussions"
+            value="1"
+            aria-describedby="discussions-feature-desc"
+            id="discussions-feature"
+            
+            
+          >
+          <label for="discussions-feature">Discussions</label>
+          <span class="hx_status-indicator status-indicator ml-1 js-status-indicator">
+            <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="status-indicator-spinner anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg>
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+          </span>
+          <p id="discussions-feature-desc" class="note">
+              Discussions is the space for your community to have conversations,
+              ask questions and post answers without opening issues.
+          </p>
+        </div>
+      </div>
+</form>      <div data-view-component="true" class="flash ml-5 mr-3 my-3">
+  
+        <div class="d-flex flex-md-row flex-column flex-md-items-center flex-items-start">
+          <div class="mb-md-0 mb-3">
+            <h3 class="h5 mb-2">Get started with Discussions</h3>
+            <p class="pr-6 mb-0">Engage your community by having discussions right in your repository, where your community already lives</p>
+          </div>
+          <div>
+            <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-turbo="false" class="" method="post" action="/pwqpol/dotfiles/discussions/welcome_templates"><input class="btn btn-primary" type="submit" value="Set up discussions" /><input type="hidden" name="authenticity_token" value="e0WW6UmyfbsO9VG6Gmyh8LFb2tSxh13NFMyX7wT6Aq1vPRJYbUXMCZK3N_dWZgza1zAelcmxC2i2WE99hJQ5LA" /></form>
+          </div>
+        </div>
+
+
+  
+</div>
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="border-top js-repo-features-form" data-autosubmit="true" data-turbo="false" action="/pwqpol/dotfiles/settings/projects" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" autocomplete="off" /><input type="hidden" name="authenticity_token" value="XTZWuKN4IY4b7y1QJnDkPmvQXuFaAK61LGnQ8jIeeUs9aFZHltz8aJRefs0Lhjsd6iN6Oh3qNdi_tAwpkcF_4w" />
+    <div class="Box-row py-0">
+          <div class="form-checkbox js-repo-option">
+            <input type="hidden" name="memex_projects_enabled" value="0">
+            <input type="checkbox" name="memex_projects_enabled" aria-describedby="memex-projects-feature-desc" id="memex-projects-feature" value="1" checked>
+            <label for="memex-projects-feature">Projects</label>
+            <span class="hx_status-indicator status-indicator v-align-top ml-1 js-status-indicator">
+              <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="status-indicator-spinner anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg>
+              <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+              <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+            </span>
+            <p id="memex-projects-feature-desc" class="note">
+              Projects on GitHub are created at the repository owner's level
+              (organization or user) and can be linked to a repository's Projects tab.
+              Projects are suitable for cross-repository development efforts such as
+              feature work, complex product roadmaps or even Issue triage.
+            </p>
+          </div>
+
+    </div>
+</form></div>
+
+
+      <div data-view-component="true" class="Subhead Subhead--spacious">
+  <h2 id="merge-button-settings" data-view-component="true" class="Subhead-heading Subhead-heading--large">Pull Requests</h2>
+  
+  
+</div>      <p id="merge-button-settings-desc">
+        When merging pull requests, you can allow any combination of merge commits, squashing, or rebasing.
+        At least one option must be enabled.
+        If you have linear history requirement enabled on any protected branch, you must enable squashing or rebasing.
+      </p>
+<!-- '"` --><!-- </textarea></xmp> --></option></form><form class="repository-merge-features js-merge-features-form" data-autosubmit="true" data-turbo="false" action="/pwqpol/dotfiles/settings/update_merge_settings" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" autocomplete="off" /><input type="hidden" name="authenticity_token" value="9BUQ1Wbx96U81r0WQ_cuKgK6_vDqN41jI_rbmMzKXahDMQeBdSF52He1BruajUjppf7r9W9weztwvMiek20c3w" />
+    <div class="Box">
+      <div hidden="hidden" data-view-component="true" class="js-select-one-warning flash flash-warn flash-full">
+  
+        You must select at least one option
+
+
+  
+</div>      <div hidden="hidden" data-view-component="true" class="js-no-merge-commit-warning flash flash-warn flash-full">
+  
+        You must select squashing or rebasing option.
+        This is because linear history is required on at least one protected branch.
+
+
+  
+</div>
+      <ul aria-labelledby="merge-button-settings" aria-describedby="merge-button-settings-desc">
+        <li class="Box-row py-0">
+          <div class="form-group js-repo-option js-toggler-container merge-commit-options on">
+            <div class="form-checkbox">
+              <label for="merge_types_merge_commit">Allow merge commits</label>
+              <span class="hx_status-indicator status-indicator js-status-indicator">
+                <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="status-indicator-spinner anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg>
+                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+              </span>
+              <input type="checkbox"
+                     name="merge_types[]"
+                     value="merge_commit"
+                     aria-describedby="merge_types_merge_commit_desc"
+                     id="merge_types_merge_commit"
+                     class="js-toggler-target"
+                     checked>
+              <p id="merge_types_merge_commit_desc" class="note">Add all commits from the head branch to the base branch with a merge commit.</p>
+
+              <div class="merge-commit-message mt-2">
+                <h3 class="h5">Default commit message</h3>
+                <p class="note">Presented when merging a pull request with merge.</p>
+
+                <details class="select-menu details-reset details-overlay mt-1">
+                    <summary data-view-component="true" class="select-menu-button btn">    <span data-menu-button>Default message</span>
+</summary>                  <details-menu class="select-menu-modal position-absolute" style="z-index: 99;">
+                    <div class="select-menu-list">
+                        <label class="select-menu-item text-normal f6" role="menuitemradio" tabindex="0" aria-checked="true">
+                          <input type="radio" name="merge_commit_types[]" id="merge_commit_types__use_default_merge_title_and_body" value="use_default_merge_title_and_body" checked="checked" />
+                          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check select-menu-item-icon">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+                          <span data-menu-button-text>Default message</span>
+                        </label>
+                        <label class="select-menu-item text-normal f6" role="menuitemradio" tabindex="0" aria-checked="false">
+                          <input type="radio" name="merge_commit_types[]" id="merge_commit_types__use_merge_pr_title_as_default" value="use_merge_pr_title_as_default" />
+                          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check select-menu-item-icon">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+                          <span data-menu-button-text>Pull request title</span>
+                        </label>
+                        <label class="select-menu-item text-normal f6" role="menuitemradio" tabindex="0" aria-checked="false">
+                          <input type="radio" name="merge_commit_types[]" id="merge_commit_types__use_merge_pr_body_as_default" value="use_merge_pr_body_as_default" />
+                          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check select-menu-item-icon">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+                          <span data-menu-button-text>Pull request title and description</span>
+                        </label>
+                    </div>
+                  </details-menu>
+                </details>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="Box-row py-0">
+          <div class="form-group js-repo-option js-toggler-container merge-squash-options on">
+            <div class="form-checkbox">
+              <label for="merge_types_squash">Allow squash merging</label>
+              <span class="hx_status-indicator status-indicator js-status-indicator">
+                <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="status-indicator-spinner anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg>
+                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+              </span>
+              <input type="checkbox"
+                     name="merge_types[]"
+                     value="squash_merge"
+                     aria-describedby="merge_types_squash_desc"
+                     id="merge_types_squash"
+                     class="js-toggler-target"
+                     checked>
+              <p id="merge_types_squash_desc" class="note">Combine all commits from the head branch into a single commit in the base branch.</p>
+
+              <div class="mt-2 squash-commit-message">
+                <h3 class="h5">Default commit message</h3>
+                <p class="note">Presented when merging a pull request with squash.</p>
+
+                <details class="select-menu details-reset details-overlay mt-1">
+                    <summary data-view-component="true" class="select-menu-button btn">    <span data-menu-button>Default message</span>
+</summary>                  <details-menu class="select-menu-modal position-absolute" style="z-index: 99;">
+                    <div class="select-menu-list">
+                        <label class="select-menu-item text-normal f6" role="menuitemradio" tabindex="0" aria-checked="true">
+                          <input type="radio" name="squash_merge_commit_types[]" id="squash_merge_commit_types__use_default_squash_title_and_body" value="use_default_squash_title_and_body" checked="checked" />
+                          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check select-menu-item-icon">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+                          <span data-menu-button-text>Default message</span>
+                        </label>
+                        <label class="select-menu-item text-normal f6" role="menuitemradio" tabindex="0" aria-checked="false">
+                          <input type="radio" name="squash_merge_commit_types[]" id="squash_merge_commit_types__use_squash_pr_title_as_default" value="use_squash_pr_title_as_default" />
+                          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check select-menu-item-icon">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+                          <span data-menu-button-text>Pull request title</span>
+                        </label>
+                        <label class="select-menu-item text-normal f6" role="menuitemradio" tabindex="0" aria-checked="false">
+                          <input type="radio" name="squash_merge_commit_types[]" id="squash_merge_commit_types__use_squash_pr_commits_as_default" value="use_squash_pr_commits_as_default" />
+                          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check select-menu-item-icon">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+                          <span data-menu-button-text>Pull request title and commit details</span>
+                        </label>
+                        <label class="select-menu-item text-normal f6" role="menuitemradio" tabindex="0" aria-checked="false">
+                          <input type="radio" name="squash_merge_commit_types[]" id="squash_merge_commit_types__use_squash_pr_body_as_default" value="use_squash_pr_body_as_default" />
+                          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check select-menu-item-icon">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+                          <span data-menu-button-text>Pull request title and description</span>
+                        </label>
+                    </div>
+                  </details-menu>
+                </details>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="Box-row py-0">
+          <div class="form-group js-repo-option">
+            <div class="form-checkbox">
+              <label for="merge_types_rebase">Allow rebase merging</label>
+              <span class="hx_status-indicator status-indicator js-status-indicator">
+                <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="status-indicator-spinner anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg>
+                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+              </span>
+              <input type="checkbox"
+                     name="merge_types[]"
+                     value="rebase_merge"
+                     aria-describedby="merge_types_rebase_desc"
+                     id="merge_types_rebase"
+                     checked>
+              <p id="merge_types_rebase_desc" class="note">Add all commits from the head branch onto the base branch individually.</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <p class="mt-3">
+      Control how and when users are prompted to update their branches if there are new changes available in the base branch.
+    </p>
+    <div class="Box">
+      <ul>
+        <li class="Box-row py-0">
+          <div class="form-group js-repo-option">
+            <div class="form-checkbox">
+              <label for="allow_update_branch">Always suggest updating pull request branches</label>
+              <span class="hx_status-indicator status-indicator js-status-indicator">
+                <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="status-indicator-spinner anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg>
+                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+              </span>
+              <input type="checkbox"
+                    name="merge_types[]"
+                    value="update_branch"
+                    aria-describedby="allow_update_branch_desc"
+                    id="allow_update_branch"
+                    >
+              <p id="allow_update_branch_desc" class="note">Whenever there are new changes available in the base branch, present an “update branch” option in the pull request.</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <p class="mt-3">
+      You can allow setting pull requests to merge automatically once all required reviews and status checks have passed.
+    </p>
+    <div class="Box">
+      <ul>
+        <li class="Box-row py-0">
+          <div class="form-group js-repo-option">
+            <div class="form-checkbox">
+              <label for="merge_types_auto_merge" >
+                Allow auto-merge
+              </label>
+              <span class="hx_status-indicator status-indicator js-status-indicator">
+                <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="status-indicator-spinner anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg>
+                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+              </span>
+              <input type="checkbox"
+                    name="merge_types[]"
+                    value="auto_merge"
+                    aria-describedby="merge_types_auto_merge_desc"
+                    id="merge_types_auto_merge"
+                    
+                    
+                    data-analytics-event="{&quot;category&quot;:&quot;Merge Button&quot;,&quot;action&quot;:&quot;Allow Auto-Merge&quot;,&quot;label&quot;:&quot;merge_button_settings_toggle:true&quot;}"
+              >
+              <p id="merge_types_auto_merge_desc" class="note">
+                Waits for merge requirements to be met and then merges automatically.
+                <a class="small" target="_blank" rel="noopener noreferrer" href="https://docs.github.com/github/collaborating-with-issues-and-pull-requests/automatically-merging-a-pull-request">Learn more</a>
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+        <p class="mt-3">
+          After pull requests are merged, you can have head branches deleted automatically.
+        </p>
+        <div class="Box">
+          <ul>
+            <li class="Box-row py-0">
+              <div class="form-group js-repo-option">
+                <div class="form-checkbox">
+                  <label for="merge_types_delete_branch">Automatically delete head branches</label>
+                  <span class="hx_status-indicator status-indicator js-status-indicator">
+                    <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="status-indicator-spinner anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg>
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+                  </span>
+                  <input type="checkbox"
+                        name="merge_types[]"
+                        value="delete_branch"
+                        aria-describedby="merge_types_delete_branch_desc"
+                        id="merge_types_delete_branch"
+                        >
+                  <p id="merge_types_delete_branch_desc" class="note">Deleted branches will still be able to be restored.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+  <noscript>
+      <button type="submit" data-view-component="true" class="btn-primary btn">    Save changes
+</button>
+  </noscript>
+</form>
+
+        <div data-view-component="true" class="Subhead Subhead--spacious">
+  <h2 id="archive-settings" data-view-component="true" class="Subhead-heading Subhead-heading--large">Archives</h2>
+  
+  
+</div>        <p id="archive-settings-desc">
+          When creating source code archives, you can choose to include files stored using Git LFS in the archive.
+        </p>
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-autosubmit="true" data-turbo="false" action="/pwqpol/dotfiles/settings/update_archive_settings" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" autocomplete="off" /><input type="hidden" name="authenticity_token" value="3NeLXYQM4EtpVudBj2fl9fWTT6SU-2m1g9Q6S7L0ay_caGKCjPbI5e5zPIkfe66-ILoWGkb2bScI9uCL8an-DA" />
+
+    <div class="Box">
+      <ul>
+        <li class="Box-row py-0">
+          <div class="form-group js-repo-option">
+            <div class="form-checkbox">
+              <label for="archive_include_lfs_objects">Include Git LFS objects in archives</label>
+              <span class="status-indicator js-status-indicator">
+                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+              </span>
+              <input type="checkbox"
+                     name="include_lfs_objects"
+                     value="1"
+                     id="archive_include_lfs_objects"
+                     aria-describedby=archive_include_lfs_objects_desc
+                     >
+                <p id="archive_include_lfs_objects_desc" class="note">Git LFS usage in archives is billed at the same rate as usage with the client.</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  <noscript>
+      <button type="submit" data-view-component="true" class="btn-primary btn">    Save changes
+</button>
+  </noscript>
+</form>
+
+      <div data-view-component="true" class="Subhead Subhead--spacious border-bottom-0 mb-0">
+  <h2 id="push-settings" data-view-component="true" class="Subhead-heading Subhead-heading--large">Pushes</h2>
+  
+  
+</div>      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-push-settings-form" data-autosubmit="true" data-turbo="false" action="/pwqpol/dotfiles/settings/update_push_settings" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" autocomplete="off" /><input type="hidden" name="authenticity_token" value="8R77dG5n0MVxLAi6z2Po0eu6kxphzVvmLRqJxjlmwTo_zSgi7xQVLM0Zu5FL2e1rAXp2skE4ohnY2lYxUHDrvw" />
+
+
+  <div class="Box">
+    <div hidden="hidden" data-view-component="true" class="js-push-save-failed-message flash flash-warn flash-full">
+</div>
+
+    <ul>
+      <li class="Box-row py-0">
+        <div class="form-group js-repo-option">
+          <div class="form-checkbox">
+            <label for="enable_max_pushes_checkbox">Limit how many branches and tags can be updated in a single push</label>
+
+            <span label="Beta" title="Label: Beta" data-view-component="true" class="Label Label--success ml-2 px-2">Beta</span>
+
+            <span class="hx_status-indicator status-indicator js-status-indicator">
+              <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16" viewBox="0 0 16 16" fill="none" data-view-component="true" class="status-indicator-spinner anim-rotate">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" fill="none" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+</svg>
+              <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+            </span>
+
+            <input type="checkbox"
+                    value="true"
+                    id="enable_max_pushes_checkbox"
+                    name="enable_max_pushes"
+                    aria-describedby="enable_max_pushes_desc"
+                    data-last-saved-value="false"
+                    >
+
+            <p id="enable_max_pushes_desc" class="note">
+              Pushes will be rejected if they attempt to update more than this.
+              <a class="Link--inTextBlock" href="https://github.blog/changelog/2022-06-15-block-potentially-destructive-git-pushes">Learn more about this setting</a>, and send us your
+              <a class="Link--inTextBlock" href="https://github.com/github-community/community/discussions/categories/general">feedback</a>.
+            </p>
+
+            <div class="js-form-numeric mt-2"
+              data-last-saved-value="5"
+              hidden>
+              <label for="max_pushes_count_text_field">Up to
+                <input type="number" name="max_pushes_count" id="max_pushes_count_text_field" value="5" class="form-control shorter" data-last-saved-value="5" inputmode="numeric" />
+              branches and tags can be updated in a push</label>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <noscript>
+      <button type="submit" data-view-component="true" class="btn-primary btn">    Save changes
+</button>
+  </noscript>
+</form>
+
+    <div data-view-component="true" class="Subhead Subhead--spacious border-bottom-0 mb-0">
+  <h2 id="danger-zone" data-view-component="true" class="Subhead-heading Subhead-heading--large">Danger Zone</h2>
+  
+  
+</div>
+    <div data-view-component="true" class="Box color-border-danger">
+  
+  
+    <ul data-view-component="true">
+        <li data-view-component="true" class="Box-row flex-sm-nowrap d-flex flex-items-center flex-wrap">        <div class="flex-md-order-1 flex-order-2">
+    <button type="button" disabled="disabled" data-view-component="true" class="Button--danger Button--medium Button ml-0 ml-md-3 px-3">  <span class="Button-content">
+    <span class="Button-label">Change visibility</span>
+  </span>
+</button>
+
+</div>
+
+<div class="flex-auto mb-md-0 mb-2">
+  <strong >
+    Change repository visibility
+  </strong>
+  <div class="mb-0" >
+    Due to restrictions on this repository, you cannot change the visibility.
+  </div>
+</div>
+
+</li>
+        <li data-view-component="true" class="Box-row flex-sm-nowrap d-flex flex-items-center flex-wrap">          <div class="flex-auto">
+    <strong>Disable branch protection rules</strong>
+    <p class="mb-0">
+      Disable branch protection rules enforcement and APIs
+    </p>
+  </div>
+
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="flex-md-order-1 flex-order-2" data-turbo="false" action="/pwqpol/dotfiles/settings/update_branch_protection" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put" autocomplete="off" /><input type="hidden" name="authenticity_token" value="sttSa9HajO7_GevxRxiN-KePi61xyeVqSI0azXb5rSFclUE1yo_Yk8CCJy6K4B_m4Sz0gI7OHSolkHhzgNlvhA" />
+    <input type="hidden" name="branch_protection_disabled" value="true">
+    <details class="details-reset details-overlay details-overlay-dark " >
+              <summary data-view-component="true" class="btn-danger btn mt-2 mt-md-0">    Disable branch protection rules
+</summary>
+  <details-dialog
+    class="Box d-flex flex-column anim-fade-in fast Box--overlay "
+      aria-label="Disable branch protection rules"
+>
+    <div class="Box-header">
+      <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+      </button>
+        <h1 class="Box-title" >Disable branch protection rules</h1>
+    </div>
+      <div data-view-component="true" class="flash flash-warn flash-full">
+  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+                This will hide the branch protection settings and disable branch protection rules for this repository.
+
+
+
+  
+</div>      <div class="Box-body overflow-auto">
+                <p>
+          Disabling branch protection rules allows you to enforce branch and tag protections exclusively with Repository Rules.
+        </p>
+
+        <p>This action will disable:</p>
+        <ul class="ml-4 mb-2">
+          <li class="mb-2">Branch protection rule enforcement</li>
+          <li class="mb-2">Branch protection rule APIs</li>
+        </ul>
+
+        <p>
+          <strong>0 branch protection rules</strong> will be disabled as part of this action
+        </p>
+
+      </div>
+        <div class="Box-footer">
+                    <button data-disable-invalid="true" type="submit" data-view-component="true" class="btn-danger btn btn-block">    Disable branch protection rules
+</button>
+        </div>
+  </details-dialog>
+</details>
+</form>
+</li>
+        <li data-view-component="true" class="Box-row flex-sm-nowrap d-flex flex-items-center flex-wrap">        
+  <div class="flex-auto">
+    <strong>Transfer ownership</strong>
+      <p class="mb-0">
+        Transfer this repository to another user or to an organization where you
+        have the ability to create repositories.
+      </p>
+  </div>
+
+    <a href="/pwqpol/dotfiles/transfer" data-view-component="true" class="Button--danger Button--medium Button mt-2 mt-md-0">  <span class="Button-content">
+    <span class="Button-label">Transfer</span>
+  </span>
+</a>
+
+</li>
+        <li data-view-component="true" class="Box-row flex-sm-nowrap d-flex flex-items-center flex-wrap">          <details class="details-reset details-overlay details-overlay-dark flex-order-2" >
+            <summary data-view-component="true" class="boxed-action btn-danger btn float-none float-md-right ml-0 ml-md-3 mt-2 mt-md-0">    Archive this repository
+</summary>
+
+  <details-dialog
+    class="Box d-flex flex-column anim-fade-in fast Box--overlay "
+      aria-label="Archive repository"
+>
+    <div class="Box-header">
+      <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+      </button>
+        <h1 class="Box-title" >Archive repository</h1>
+    </div>
+      <div data-view-component="true" class="flash flash-warn flash-full">
+  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+                <strong class="overflow-hidden">This repository will become read-only.</strong>
+        <p class="overflow-hidden mt-1 ml-5">You will still be able to fork the repository and unarchive it at any time.</p>
+
+
+
+  
+</div>      <div class="Box-body overflow-auto">
+              <div class="d-flex flex-nowrap mb-3">
+        <div><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-workflow">
+    <path d="M0 1.75C0 .784.784 0 1.75 0h3.5C6.216 0 7 .784 7 1.75v3.5A1.75 1.75 0 0 1 5.25 7H4v4a1 1 0 0 0 1 1h4v-1.25C9 9.784 9.784 9 10.75 9h3.5c.966 0 1.75.784 1.75 1.75v3.5A1.75 1.75 0 0 1 14.25 16h-3.5A1.75 1.75 0 0 1 9 14.25v-.75H5A2.5 2.5 0 0 1 2.5 11V7h-.75A1.75 1.75 0 0 1 0 5.25Zm1.75-.25a.25.25 0 0 0-.25.25v3.5c0 .138.112.25.25.25h3.5a.25.25 0 0 0 .25-.25v-3.5a.25.25 0 0 0-.25-.25Zm9 9a.25.25 0 0 0-.25.25v3.5c0 .138.112.25.25.25h3.5a.25.25 0 0 0 .25-.25v-3.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg></div>
+        <div class="pl-3 flex-1">
+            <p class="overflow-hidden">All scheduled workflows will stop running.</p>
+        </div>
+      </div>
+
+        <div class="d-flex flex-nowrap mb-3" >
+          <div><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-shield">
+    <path d="M7.467.133a1.748 1.748 0 0 1 1.066 0l5.25 1.68A1.75 1.75 0 0 1 15 3.48V7c0 1.566-.32 3.182-1.303 4.682-.983 1.498-2.585 2.813-5.032 3.855a1.697 1.697 0 0 1-1.33 0c-2.447-1.042-4.049-2.357-5.032-3.855C1.32 10.182 1 8.566 1 7V3.48a1.75 1.75 0 0 1 1.217-1.667Zm.61 1.429a.25.25 0 0 0-.153 0l-5.25 1.68a.25.25 0 0 0-.174.238V7c0 1.358.275 2.666 1.057 3.86.784 1.194 2.121 2.34 4.366 3.297a.196.196 0 0 0 .154 0c2.245-.956 3.582-2.104 4.366-3.298C13.225 9.666 13.5 8.36 13.5 7V3.48a.251.251 0 0 0-.174-.237l-5.25-1.68ZM8.75 4.75v3a.75.75 0 0 1-1.5 0v-3a.75.75 0 0 1 1.5 0ZM9 10.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg></div>
+          <div class="pl-3 flex-1">
+            <p class="overflow-hidden mb-1">Security features will be unavailable:</p>
+            <ul class="ml-3" style="column-count: 2">
+              <li><span >Code scanning</span></li>
+            </ul>
+          </div>
+        </div>
+
+      <div class="d-flex flex-nowrap">
+        <div><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-checklist">
+    <path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"></path>
+</svg></div>
+        <div class="pl-3 flex-1">
+          <p class="overflow-hidden mb-1">Before you archive, please consider:</p>
+          <ul class="ml-3">
+            <li>Updating any repository settings</li>
+            <li>Closing all open issues and pull requests</li>
+            <li>Making a note in your README</li>
+          </ul>
+        </div>
+      </div>
+
+
+      </div>
+        <div class="Box-footer">
+                <p id="archive-repo-name-label">Please type <strong>pwqpol/dotfiles</strong> to confirm.</p>
+
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-turbo="false" action="/pwqpol/dotfiles/settings/archive" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="jYL0vpj0viDTEt76pDPRexhHqVDNhWpcpcNs3kdau_jMMTAQckmZcQFl8tlq3rZTSIeg6YWBmMURWgpO2T5R5A" />
+        <p>
+          <input type="text" class="form-control input-block" autofocus required
+                 pattern="[pP][wW][qQ][pP][oO][lL]/[dD][oO][tT][fF][iI][lL][eE][sS]"
+                 aria-labelledby="archive-repo-name-label"
+                 name="verify"
+                 autocomplete="off">
+        </p>
+          <button data-disable-invalid="" type="submit" data-view-component="true" class="btn-danger btn btn-block">    <span class="d-md-inline-block d-none">I understand the consequences, archive this repository</span>
+          <span class="d-inline-block d-md-none">Archive this repository</span>
+</button></form>
+        </div>
+  </details-dialog>
+</details>
+  <div class="flex-auto">
+    <strong>Archive this repository</strong>
+    <p class="mb-0">Mark this repository as archived and read-only.</p>
+  </div>
+
+</li>
+        <li data-view-component="true" class="Box-row flex-sm-nowrap d-flex flex-items-center flex-wrap">        <div class="flex-md-order-1 flex-order-2">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-turbo="false" action="/pwqpol/dotfiles/settings/delete" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="delete" autocomplete="off" /><input type="hidden" name="authenticity_token" value="t_Xr-E4SL2nsP_LMqVdNXor4_2s0cMMEsMC83_oZSUhf7-zzg5xHEIJwpOK6OHJ7wj1yUCvyW-MKEHneChbUJQ" autocomplete="off" />
+      <button id="dialog-show-repo-delete-menu-dialog" data-show-dialog-id="repo-delete-menu-dialog" type="button" data-view-component="true" class="js-repo-delete-button Button--danger Button--medium Button float-none float-sm-right ml-0 ml-md-3 mt-2 mt-md-0">  <span class="Button-content">
+    <span class="Button-label">Delete this repository</span>
+  </span>
+</button>
+
+<div class="Overlay--hidden Overlay-backdrop--center" data-modal-dialog-overlay>
+  <modal-dialog role="dialog" id="repo-delete-menu-dialog" aria-modal="true" aria-disabled="true" aria-labelledby="repo-delete-menu-dialog-title" aria-describedby="repo-delete-menu-dialog-description" data-view-component="true" class="Overlay Overlay-whenNarrow Overlay--size-medium-portrait Overlay--motion-scaleFade">
+    <div data-view-component="true" class="Overlay-header Overlay-header--divided">
+  <div class="Overlay-headerContentWrap">
+    <div class="Overlay-titleWrap">
+      <h1 class="Overlay-title " id="repo-delete-menu-dialog-title">
+        Delete pwqpol/dotfiles
+      </h1>
+    </div>
+    <div class="Overlay-actionWrap">
+      <button data-close-dialog-id="repo-delete-menu-dialog" aria-label="Close" type="button" data-view-component="true" class="close-button Overlay-closeButton"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg></button>
+    </div>
+  </div>
+</div>
+      <div data-view-component="true" class="Overlay-body">          <div class="text-center">
+            <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" class="octicon octicon-repo-locked color-fg-muted mt-2">
+    <path d="M2 2.75A2.75 2.75 0 0 1 4.75 0h14.5a.75.75 0 0 1 .75.75v8a.75.75 0 0 1-1.5 0V1.5H4.75c-.69 0-1.25.56-1.25 1.25v12.651A2.987 2.987 0 0 1 5 15h6.25a.75.75 0 0 1 0 1.5H5A1.5 1.5 0 0 0 3.5 18v1.25c0 .69.56 1.25 1.25 1.25h6a.75.75 0 0 1 0 1.5h-6A2.75 2.75 0 0 1 2 19.25V2.75Z"></path><path d="M15 14.5a3.5 3.5 0 1 1 7 0V16h.25c.966 0 1.75.784 1.75 1.75v4.5A1.75 1.75 0 0 1 22.25 24h-7.5A1.75 1.75 0 0 1 13 22.25v-4.5c0-.966.784-1.75 1.75-1.75H15Zm3.5-2a2 2 0 0 0-2 2V16h4v-1.5a2 2 0 0 0-2-2Z"></path>
+</svg>
+
+            <p data-view-component="true" class="text-bold f3 mt-2">pwqpol/dotfiles</p>
+
+            <div class="mt-2">
+              <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star color-fg-muted mr-1">
+    <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+</svg>
+              0
+              stars
+
+              <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-eye color-fg-muted ml-2 mr-1">
+    <path d="M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14c-1.981 0-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.33 2.992 6.019 2 8 2ZM1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717C5.176 11.758 6.527 12.5 8 12.5c1.473 0 2.825-.742 3.955-1.715 1.124-.967 1.954-2.096 2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5c-1.473 0-2.825.742-3.955 1.715-1.124.967-1.954 2.096-2.366 2.717ZM8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10Z"></path>
+</svg>
+              1
+              watcher
+            </div>
+          </div>
+
+          <div id="repo-delete-warning-container"  >
+  
+</div>
+
+</div>
+      <div data-view-component="true" class="Overlay-footer Overlay-footer--alignEnd Overlay-footer--divided">          <div class="full-button width-full" id="repo-delete-proceed-button-container">
+
+  <button id="repo-delete-proceed-button" data-next-stage="2" data-test-selector="repo-delete-proceed-button" type="button" data-view-component="true" class="js-repo-delete-proceed-button Button--secondary Button--medium Button Button--fullWidth">  <span class="Button-content">
+    <span class="Button-label">I want to delete this repository</span>
+  </span>
+</button>
+</div>
+
+</div>
+</modal-dialog></div>
+</form></div>
+
+<div class="flex-auto mb-md-0 mb-2">
+  <strong >
+    Delete this repository
+  </strong>
+  <p class="mb-0" >
+    Once you delete a repository, there is no going back. Please be certain.
+  </p>
+</div>
+
+  <template
+    id="delete-repository-step-1"
+    
+  >
+    <div id="repo-delete-warning-container"  >
+  
+</div>
+
+  </template>
+
+  <template
+    id="proceed-button-delete-step-1"
+    
+  >
+    <div class="full-button width-full" id="repo-delete-proceed-button-container">
+
+  <button id="repo-delete-proceed-button" data-next-stage="2" data-test-selector="repo-delete-proceed-button" type="button" data-view-component="true" class="js-repo-delete-proceed-button Button--secondary Button--medium Button Button--fullWidth">  <span class="Button-content">
+    <span class="Button-label">I want to delete this repository</span>
+  </span>
+</button>
+</div>
+
+  </template>
+  <template
+    id="delete-repository-step-2"
+    
+  >
+    <div id="repo-delete-warning-container"  >
+  <hr><div class="flash mt-3 flash-warn"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>Unexpected bad things will happen if you don’t read this!</div><div class="mt-2"><div data-view-component="true" class="TimelineItem TimelineItem--condensed repository-delete-warning p-0">
+  
+  <div data-view-component="true" class="TimelineItem-badge color-bg-transparent color-fg-subtle"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-dot-fill">
+    <path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"></path>
+</svg></div>
+  <div data-view-component="true" class="TimelineItem-body">This will permanently delete the <strong>pwqpol/dotfiles</strong> repository, wiki, issues, comments, packages, secrets, workflow runs, and remove all collaborator associations.</div>
+</div></div><br>
+</div>
+
+  </template>
+
+  <template
+    id="proceed-button-delete-step-2"
+    
+  >
+    <div class="full-button width-full" id="repo-delete-proceed-button-container">
+
+  <button id="repo-delete-proceed-button" data-next-stage="3" data-test-selector="repo-delete-proceed-button" type="button" data-view-component="true" class="js-repo-delete-proceed-button Button--secondary Button--medium Button Button--fullWidth">  <span class="Button-content">
+    <span class="Button-label">I have read and understand these effects</span>
+  </span>
+</button>
+</div>
+
+  </template>
+  <template
+    id="delete-repository-step-3"
+    
+  >
+    <div id="repo-delete-warning-container"  >
+  
+</div>
+
+  </template>
+
+  <template
+    id="proceed-button-delete-step-3"
+    
+  >
+    <div class="full-button width-full" id="repo-delete-proceed-button-container">
+      <primer-text-field class="FormControl width-full FormControl--fullWidth">
+      <label class="FormControl-label" for="verification_field">
+        To confirm, type &quot;pwqpol/dotfiles&quot; in the box below
+</label>    
+  <div class="FormControl-input-wrap">
+    
+      <input data-repo-nwo="pwqpol/dotfiles" data-test-selector="repo-delete-proceed-confirmation" data-target="primer-text-field.inputElement " invalid="true" aria-invalid="true" aria-describedby="validation-811165a6-9974-4d0f-ae45-f059d66f263b" class="FormControl-input FormControl-medium js-repo-delete-proceed-confirmation mb-2 FormControl-input FormControl-medium js-repo-delete-proceed-confirmation" type="text" name="verification_field" id="verification_field" />
+</div>
+    <div class="FormControl-inlineValidation" id="validation-811165a6-9974-4d0f-ae45-f059d66f263b" hidden="hidden">
+  <span class="FormControl-inlineValidation--visual" data-target="primer-text-field.validationSuccessIcon" hidden><svg aria-hidden="true" height="12" viewBox="0 0 12 12" version="1.1" width="12" data-view-component="true" class="octicon octicon-check-circle-fill">
+    <path d="M6 0a6 6 0 1 1 0 12A6 6 0 0 1 6 0Zm-.705 8.737L9.63 4.403 8.392 3.166 5.295 6.263l-1.7-1.702L2.356 5.8l2.938 2.938Z"></path>
+</svg></span>
+  <span class=" FormControl-inlineValidation--visual" data-target="primer-text-field.validationErrorIcon"><svg aria-hidden="true" height="12" viewBox="0 0 12 12" version="1.1" width="12" data-view-component="true" class="octicon octicon-alert-fill">
+    <path d="M4.855.708c.5-.896 1.79-.896 2.29 0l4.675 8.351a1.312 1.312 0 0 1-1.146 1.954H1.33A1.313 1.313 0 0 1 .183 9.058ZM7 7V3H5v4Zm-1 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+</svg></span>
+  <span></span>
+</div>
+    
+</primer-text-field>
+    <input type="hidden" name="verify" value="pwqpol/dotfiles">
+
+  <button id="repo-delete-proceed-button" data-test-selector="repo-delete-proceed-button" type="submit" disabled="disabled" data-view-component="true" class="js-repo-delete-proceed-button Button--danger Button--medium Button Button--fullWidth">  <span class="Button-content">
+    <span class="Button-label">Delete this repository</span>
+  </span>
+</button>
+</div>
+
+  </template>
+
+
+</li>
+</ul>  
+</div>  </div><!-- /#options_bucket -->
+
+</div></div></div>
+</div>  </div>
+
+  </turbo-frame>
+
+
+
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/light-38f1bf52eeeb.css" /><link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/dark-56010aa53a8f.css" /><link data-color-theme="dark_dimmed" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_dimmed-b2e1b478d5b4.css" /><link data-color-theme="dark_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_high_contrast-e7f12ffa82f3.css" /><link data-color-theme="dark_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_colorblind-ddca79c20026.css" /><link data-color-theme="light_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_colorblind-8017b9c4037b.css" /><link data-color-theme="light_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_high_contrast-3ce2d3d8a4d3.css" /><link data-color-theme="light_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_tritanopia-02059c141ad5.css" /><link data-color-theme="dark_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_tritanopia-870ee47909bf.css" />
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/repository-2e5f0ce2e282.css" />
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/settings-6d214904e3a7.css" />
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/suggestions-71a1e0f3da7b.css" />
+<script type="application/json" id="client-env">{"locale":"en","featureFlags":["copilot_conversational_ux_streaming","copilot_cosmos_docsets","docset_management_ui","failbot_handle_non_errors","geojson_azure_maps","image_metric_tracking","repository_suggester_elastic_search","turbo_experiment_risky","sample_network_conn_type","no_character_key_shortcuts_in_inputs"]}</script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/wp-runtime-baca81ae4722.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_dompurify_dist_purify_js-6890e890956f.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_stacktrace-parser_dist_stack-trace-parser_esm_js-node_modules_github_bro-a4c183-79f9611c275b.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_hydro-analytics-client_dist_analytics-client_js-node_modules_gith-6a10dd-8837a7c17569.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/ui_packages_soft-nav_soft-nav_ts-3e05ff0dd044.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/environment-30e216bc209e.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_selector-observer_dist_index_esm_js-9f960d9b217c.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_primer_behaviors_dist_esm_focus-zone_js-086f7a27bac0.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_relative-time-element_dist_index_js-c6fd49e3fd28.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_fzy_js_index_js-node_modules_github_combobox-nav_dist_index_js-node_modu-344bff-421f7a8c1008.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_delegated-events_dist_index_js-node_modules_github_details-dialog-elemen-29dc30-a2a71f11a507.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_remote-inp-59c459-d0c49521eb35.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_file-attachment-element_dist_index_js-node_modules_primer_view-co-eb424d-e705be3ac5fd.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/github-elements-871cc8490a1f.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/element-registry-02245952093f.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_catalyst_lib_index_js-node_modules_github_hydro-analytics-client_-978abc0-15861e0630b6.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_lit-html_lit-html_js-5b376145beff.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_github_alive-client_dist-bf5aa2-1b562c29ab8e.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_morphdom_dist_morphdom-esm_js-5bff297a06de.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-c91f4ad18b62.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_color-convert_index_js-72c9fbde5ad4.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_remote-form_dist_index_js-node_modules_scroll-anchoring_dist_scro-231ccf-aa129238d13b.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_session-resume_dist_index_js-node_modules_primer_behaviors_dist_e-ac74c6-c3eb71941f78.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_primer_behaviors_dist_esm_dimensions_js-node_modules_github_jtml_lib_index_js-95b84ee6bc34.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_paste-markdown_dist_index_esm_js-node_modules_github_quote-select-618d6c-59676cf880fb.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_updatable-content_ts-793542f6e0fb.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_behaviors_task-list_ts-app_assets_modules_github_onfocus_ts-app_ass-079b43-06bdd3d1733f.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_sticky-scroll-into-view_ts-3aa02466adc1.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_behaviors_ajax-error_ts-app_assets_modules_github_behaviors_include-2e2258-70fc444f4dc3.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_behaviors_commenting_edit_ts-app_assets_modules_github_behaviors_ht-83c235-b85e9f4f1304.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/behaviors-5bf0b89f0de8.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_delegated-events_dist_index_js-node_modules_github_catalyst_lib_index_js-d0256ebff5cd.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/notifications-global-99d196517b1b.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_primer_behaviors_dist_esm_dimensions_js-node_modules_delegated-events_di-94a48b-793ce2c025bd.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_virtualized-list_es_index_js-node_modules_github_template-parts_lib_index_js-878844713bc9.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_mini-throt-08ab15-5c0a626f08d8.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_filter-input_ts-7bcd335fab08.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_ref-selector_ts-92d4050cac07.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_onfocus_ts-app_assets_modules_github_settings_actions-policy-form_t-6a1c83-1a72f02f0ded.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_settings_runner-groups_ts-app_assets_modules_github_throttled-input_ts-1fa71defa9ba.js"></script>
+<script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/settings-bc044af6d88a.js"></script>
+
+<meta name="turbo-body-classes" content="logged-in env-production page-responsive">
+
+<div id="pjax-head" data-turbo-head>
+  <title>General</title>
+
+  <meta http-equiv="x-pjax-version" content="0082f239c83e7c947773a06d2aa8ba1a5539872230668211030484dda8dbdb6e" data-turbo-track="reload">
+  <meta http-equiv="x-pjax-csp-version" content="611e3beaf6df2ba8f98070845c8e5ef70f0ffc535519af6685e8341fcd41c235" data-turbo-track="reload">
+  <meta http-equiv="x-pjax-css-version" content="c4cb55d347cf7b0d10da54ebe2715d93a40d93e6d23973b95b92ac2b54b64160" data-turbo-track="reload">
+  <meta http-equiv="x-pjax-js-version" content="902ad3c47e8c58ab2acc7cd415e9a233109c787af376597cebafc4cf0ade5cb6" data-turbo-track="reload">
+
+  <meta name="selected-link" value="repo_settings" data-turbo-transient>
+  
+  
+  <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/edit_repositories/options" data-turbo-transient="true" />
+  <meta name="request-id" content="3BB9:D2D7A:BC0E166:BED08B8:658FD851" data-turbo-transient="true" /><meta name="html-safe-nonce" content="224bbbdb61ea34615458c556ee962b0a694accc1c325439f0d34d3716f8ac353" data-turbo-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9wd3Fwb2wvZG90ZmlsZXMiLCJyZXF1ZXN0X2lkIjoiM0JCOTpEMkQ3QTpCQzBFMTY2OkJFRDA4Qjg6NjU4RkQ4NTEiLCJ2aXNpdG9yX2lkIjoiNzgzMDYzMTI2MzkyOTA5NTg1NiIsInJlZ2lvbl9lZGdlIjoiZnJhIiwicmVnaW9uX3JlbmRlciI6ImlhZCJ9" data-turbo-transient="true" /><meta name="visitor-hmac" content="7095072b04908f7dc1ba85d529468bff24c5dba36dd2aa751672b205031388cc" data-turbo-transient="true" />
+  
+  <meta name="github-keyboard-shortcuts" content="repository" data-turbo-transient="true" />
+
+    <meta name="hovercard-subject-tag" content="repository:737223341" data-turbo-transient>
+
+
+  <meta name="turbo-cache-control" content="no-preview" data-turbo-transient="">
+
+  
+  <meta name="current-catalog-service-hash" content="82c569b93da5c18ed649ebd4c2c79437db4611a6a1373e805a3cb001c64130b7">
+
+
+  
+
+</div>
+
+<div id="js-flash-container" data-turbo-replace>
+
+
+      <include-fragment src="/settings/two_factor_authentication/holiday_warning_banner"></include-fragment>
+
+
+
+  <template class="js-flash-template">
+    
+<div class="flash flash-full   {{ className }}">
+  <div class="px-2" >
+    <button autofocus class="flash-close js-flash-close" type="button" aria-label="Dismiss this message">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+    </button>
+    <div aria-atomic="true" role="alert" class="js-flash-alert">
+      
+      <div>{{ message }}</div>
+
+    </div>
+  </div>
+</div>
+  </template>
+</div>
+
+<div id="responsive-meta-container" data-turbo-replace>
+</div>
+
+
+
+            <span id="issues-repo-tab-count" data-pjax-replace="" data-turbo-replace="" title="0" hidden="hidden" data-view-component="true" class="Counter">0</span>
+
+        <span id="pull-requests-repo-tab-count" data-pjax-replace="" data-turbo-replace="" title="0" hidden="hidden" data-view-component="true" class="Counter">0</span>
+
+
