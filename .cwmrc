@@ -1,0 +1,21 @@
+fontname "xft:mono:pixelsize=15:bold"
+
+#command web firefox
+#command office libreoffice
+bind-key C-i surf
+#bind-key  C-o libreoffice
+bind-key CS-e "st -f mono-14  -e emacs"
+borderwidth 1
+color activeborder  darkred
+gap 0 0 0 0
+
+bind-key 4-1 window-movetogroup-1
+bind-key 4-2 window-movetogroup-2
+bind-key 4M-1 group-only-1
+bind-key 4M-2 group-only-2
+sticky yes
+vtile 60
+bind-key 4-v window-vtile
+bind-key 4-h window-htile
+autogroup 1 "xterm,XTerm"
+autogroup 2 "st-256color"
