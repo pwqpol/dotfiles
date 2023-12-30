@@ -1,9 +1,0 @@
-.github.com	TRUE	/	TRUE	1735547825	_octo	GH1.1.1823210917.1703925424	Lax
-#HttpOnly_github.com	FALSE	/	TRUE	1735547841	_device_id	d404e8cb0f4424adbe3a01855d36f5ec	Lax
-#HttpOnly_github.com	FALSE	/	TRUE	1711701442	saved_user_sessions	147377992%3APkEKYj9aWpEeIgju6exm3UIy18_cpo23Gj34UjYabxl2qGU5	Lax
-#HttpOnly_github.com	FALSE	/	TRUE	1705135042	user_session	PkEKYj9aWpEeIgju6exm3UIy18_cpo23Gj34UjYabxl2qGU5	Lax
-#HttpOnly_github.com	FALSE	/	TRUE	1705135042	__Host-user_session_same_site	PkEKYj9aWpEeIgju6exm3UIy18_cpo23Gj34UjYabxl2qGU5	Strict
-#HttpOnly_.github.com	TRUE	/	TRUE	1735547842	logged_in	yes	Lax
-#HttpOnly_.github.com	TRUE	/	TRUE	1735547842	dotcom_user	pwqpol	Lax
-docs.github.com	FALSE	/	TRUE	1735461911	_docs-events	70d4251a-a533-40c7-9b6a-3ee619901b66	Strict
-#HttpOnly_github.com	FALSE	/	TRUE	1703941419	has_recent_activity	1	Lax
