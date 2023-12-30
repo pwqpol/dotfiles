@@ -34,3 +34,4 @@ alias poweroff="doas shutdown -ph now"
 
 
 
+alias gddg="surf duckduckgo.com/lite"
