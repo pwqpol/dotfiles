@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(wheatgrass))
  '(inhibit-startup-screen -1)
- '(package-selected-packages '(company)))
+ '(package-selected-packages '(magit company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -20,3 +20,5 @@
 (company-tng-configure-default)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)

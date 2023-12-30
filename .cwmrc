@@ -2,9 +2,9 @@ fontname "xft:mono:pixelsize=15:bold"
 
 #command web firefox
 #command office libreoffice
-bind-key C-i surf
+bind-key C-i "surf -F  https://duckduckgo.com/lite"
 #bind-key  C-o libreoffice
-bind-key CS-e "st -f mono-14  -e emacs"
+bind-key CS-e emacs
 borderwidth 1
 color activeborder  darkred
 gap 0 0 0 0
@@ -18,4 +18,4 @@ vtile 60
 bind-key 4-v window-vtile
 bind-key 4-h window-htile
 autogroup 1 "xterm,XTerm"
-autogroup 2 "st-256color"
+autogroup 2 "emacs,Emacs"
