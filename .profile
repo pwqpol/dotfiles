@@ -22,9 +22,9 @@ PS1='\[$green\]\h\[$reset\]@ \[$yellow\]\w\[$reset\] \[$red\]\$ \[$reset\]'
 
 
 #autostart apps
-#if [ -z `pgrep -n emacs` ]
-#    then emacs --daemon
-#fi
+if [ -z `pgrep -n emacs` ]
+    then emacs --daemon
+fi
 
 trap '. ~/.profile.d/ksh_logout' exit 0
 
