@@ -3,7 +3,7 @@ fontname "xft:mono:pixelsize=15:bold"
 #command web firefox
 #command office libreoffice
 bind-key C-i "surf -F  https://duckduckgo.com/lite"
-#bind-key  C-o libreoffice
+
 bind-key CS-e emacs
 borderwidth 1
 color activeborder  darkred
