@@ -5,4 +5,4 @@ XTerm*foreground:grey
 XTerm*faceName:mono
 XTerm*faceSize:14
 XTerm*scrollBar:false
-st-256color*background:red
+
